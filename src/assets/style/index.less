@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  height: 100vh
+}
+
+
+
+//item 右侧划入动画
+.item-enter,
+.item-leave-to {
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+.item-enter-active,
+.item-leave-active {
+  transition: all 0.5s ease;
+
+}
+
+//dialog 底部划入动画
+.dialog-enter,
+.dialog-leave-to {
+  transform: translateY(-30px);
+  opacity: 0;
+}
+
+.dialog-enter-active,
+.dialog-leave-active {
+  transition: all 0.3s ease;
+}
+
+
+// 滚动条
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #d8d8d8;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(151, 151, 151);
+}
+
