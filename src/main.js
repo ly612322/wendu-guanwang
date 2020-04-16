@@ -33,7 +33,9 @@ import {
   Statistic,
   Card,
   List,
-  Avatar
+  Avatar,
+  Tabs,
+  Icon
 
 } from 'ant-design-vue';
 Vue.use(Button)
@@ -52,6 +54,10 @@ Vue.use(Statistic);
 Vue.use(Card);
 Vue.use(List);
 Vue.use(Avatar);
+Vue.use(Tabs);
+Vue.use(Icon);
+
+
 
 // 配置请求根路径
 // axios.defaults.baseURL = 'http://10.1.10.1234'

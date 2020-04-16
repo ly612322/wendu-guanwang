@@ -531,7 +531,7 @@
           <a-row type="flex" justify="center" :gutter="20">
             <a-col :span="6">
               <a-form-model-item>
-                <a-select v-model="form.region" placeholder="请选择试听科目">
+                <a-select v-model="form.course" placeholder="请选择试听科目">
                   <a-select-option value="shanghai">Zone one</a-select-option>
                   <a-select-option value="beijing">Zone two</a-select-option>
                 </a-select>
@@ -712,12 +712,10 @@ export default {
       },
       form: {
         name: "",
-        region: undefined,
-        date1: undefined,
-        delivery: false,
-        type: [],
-        resource: "",
-        desc: ""
+        region: '',
+        course: '',
+        telephone:''
+   
       },
       deadline: Date.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30
     }
