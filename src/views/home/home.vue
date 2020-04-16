@@ -1,152 +1,125 @@
 <template>
   <div class="home">
-    <el-row>
-      <el-carousel :interval="5000" arrow="always" :height="bannerH">
-        <el-carousel-item>
-          <el-image
-            style="width: 100vw"
-            :style="{height:bannerH}"
-            :src="require('../../assets/image/banner_01.png')"
-            fit="cover"
-          ></el-image>
-        </el-carousel-item>
-        <el-carousel-item>
-          <el-image
-            style="width: 100vw"
-            :style="{height:bannerH}"
-            :src="require('../../assets/image/banner_02.png')"
-            fit="cover"
-          ></el-image>
-        </el-carousel-item>
-      </el-carousel>
-    </el-row>
-    <el-row type="flex" justify="center" style="flex-wrap: wrap" class="partOne">
-      <el-col :span="5" class="partOneItem" :xs="12">
-        <div style="text-align:center">
-          <el-image
-            style="width: 60px; height: 60px"
-            :src="require('../../assets/image/part1_icon1.png')"
-          ></el-image>
-          <div>
-            <h3>大数据预测考点</h3>
-          </div>
+    <a-row>
+      <a-carousel :interval="5000" autoplay arrow class="carouselTop">
+        <div
+          slot="prevArrow"
+          class="custom-slick-arrow"
+          style="left: 10px;zIndex: 999;"
+        >
+          <a-icon type="left-circle" />
         </div>
-      </el-col>
-      <el-divider direction="vertical"></el-divider>
-      <el-col :span="5" class="partOneItem" :xs="12">
-        <div style="text-align:center">
-          <el-image
-            style="width: 60px; height: 60px"
-            :src="require('../../assets/image/part1_icon2.png')"
-          ></el-image>
-          <div>
-            <h3>管联名师授课</h3>
-          </div>
+        <div
+          slot="nextArrow"
+          class="custom-slick-arrow"
+          style="right: 10px;zIndex: 999"
+        >
+          <a-icon type="right-circle" />
         </div>
-      </el-col>
-      <el-divider direction="vertical"></el-divider>
+        <div class="bannerItem1"></div>
+        <div class="bannerItem2"></div>
+      </a-carousel>
+    </a-row>
+    <transition mode="out-in" enter-active-class="animated zoomInDown">
+      <a-row type="flex" justify="center" style="flex-wrap: wrap;" class="partOne">
+        <a-col :span="5" class="partOneItem" :xs="12">
+          <div style="text-align:center">
+            <img style="width: 50px; height: 50px" src="../../assets/image/part1_icon1.png" />
+            <div>
+              <h3>大数据预测考点</h3>
+            </div>
+          </div>
+        </a-col>
+        <a-divider type="vertical" class="a-divider" />
+        <a-col :span="5" class="partOneItem" :xs="12">
+          <div style="text-align:center">
+            <img style="width: 50px; height: 50px" src="../../assets/image/part1_icon2.png" />
+            <div>
+              <h3>管联名师授课</h3>
+            </div>
+          </div>
+        </a-col>
+        <a-divider type="vertical" class="a-divider" />
 
-      <el-col :span="5" class="partOneItem" :xs="12">
-        <div style="text-align:center">
-          <el-image
-            style="width: 60px; height: 60px"
-            :src="require('../../assets/image/part1_icon3.png')"
-          ></el-image>
-          <div>
-            <h3>3V1全程服务</h3>
+        <a-col :span="5" class="partOneItem" :xs="12">
+          <div style="text-align:center">
+            <img style="width: 50px; height: 50px" src="../../assets/image/part1_icon3.png" />
+            <div>
+              <h3>3V1全程服务</h3>
+            </div>
           </div>
-        </div>
-      </el-col>
-      <el-divider direction="vertical"></el-divider>
-
-      <el-col :span="5" class="partOneItem" :xs="12">
-        <div style="text-align:center">
-          <el-image
-            style="width: 60px; height: 60px"
-            :src="require('../../assets/image/part1_icon4.png')"
-          ></el-image>
-          <div>
-            <h3>协议版型不过退费</h3>
+        </a-col>
+        <a-divider type="vertical" class="a-divider" />
+        <a-col :span="5" class="partOneItem" :xs="12">
+          <div style="text-align:center">
+            <img style="width: 50px; height: 50px" src="../../assets/image/part1_icon4.png" />
+            <div>
+              <h3>协议版型不过退费</h3>
+            </div>
           </div>
-        </div>
-      </el-col>
-    </el-row>
+        </a-col>
+      </a-row>
+    </transition>
     <div class="partTwoContent">
       <div class="partTwo">
-        <el-row>
-          <el-col>
+        <a-row>
+          <a-col>
             <h2>文都管理类联考直播好课预告</h2>
-          </el-col>
-        </el-row>
+          </a-col>
+        </a-row>
         <div class="twoContent">
-          <el-row type="flex" justify="center" :gutter="20" style="width:100%">
-            <el-col :span="6" class="courseImg hidden-xs-only">
-              <el-image
-                style="width: 400px; height: 150px"
-                :src="require('../../assets/image/part2_pic.png')"
-              ></el-image>
+          <a-row type="flex" justify="center" :gutter="20" style="width:100%">
+            <a-col :span="6" class="courseImg hidden-xs-only">
+              <img style="width: 400px; height: 150px" src="../../assets/image/part2_pic.png" />
               <div class="title">MBA直播协议班课时名称</div>
-              <div class="time">距离上课XX时XX分XX秒</div>
-            </el-col>
-            <el-col :span="8" :xs="22" class="courseList">
-              <el-timeline>
-                <el-timeline-item timestamp="今天（3月30日 星期一）" placement="top">
-                  <el-card :body-style="{ padding: '0px 15px' }">
-                    <div class="courseTime">
-                      <h4>
-                        20:00
-                        MBA直播协议班
-                      </h4>
-                      <el-link type="primary">主要链接</el-link>
-                    </div>
-                    <div class="courseTime">
-                      <h4>
-                        20:00
-                        MBA直播协议班
-                      </h4>
-                      <el-link type="primary">主要链接</el-link>
-                    </div>
-                  </el-card>
-                </el-timeline-item>
-                <el-timeline-item timestamp="明天（3月31日 星期一）" placement="top">
-                  <el-card :body-style="{ padding: '0px 15px' }">
-                    <div class="courseTime">
-                      <h4>
-                        20:00
-                        MBA直播协议班
-                      </h4>
-                      <el-link type="primary">主要链接</el-link>
-                    </div>
-                    <div class="courseTime">
-                      <h4>
-                        20:00
-                        MBA直播协议班
-                      </h4>
-                      <el-link type="primary">主要链接</el-link>
-                    </div>
-                  </el-card>
-                </el-timeline-item>
-                <el-timeline-item timestamp="后天（3月31日 星期一）" placement="top">
-                  <el-card :body-style="{ padding: '0px 15px' }">
-                    <div class="courseTime">
-                      <h4>
-                        20:00
-                        MBA直播协议班
-                      </h4>
-                      <el-link type="primary">主要链接</el-link>
-                    </div>
-                    <div class="courseTime">
-                      <h4>
-                        20:00
-                        MBA直播协议班
-                      </h4>
-                      <el-link type="primary">主要链接</el-link>
-                    </div>
-                  </el-card>
-                </el-timeline-item>
-              </el-timeline>
-            </el-col>
-          </el-row>
+              <div class="time">
+                <a-statistic-countdown
+                  :value="deadline"
+                  format="D 天 H 时 m 分 s 秒"
+                  class="countDown"
+                />
+              </div>
+            </a-col>
+            <a-col :span="8" :xs="22" class="courseList">
+              <div class="timeshow">
+                <a-timeline>
+                  <a-timeline-item>
+                    <h3>今天（3月30日 星期一）</h3>
+                    <p>
+                      Technical testing 2
+                      <a class="timeBtn">点击查看</a>
+                    </p>
+                    <p>
+                      Technical testing 3 2015-09-01
+                      <a class="timeBtn">点击查看</a>
+                    </p>
+                  </a-timeline-item>
+                  <a-timeline-item color="gray">
+                    <h3>明天（3月31日 星期一）</h3>
+                    <p>
+                      Technical testing 2
+                      <a class="timeBtn">点击查看</a>
+                    </p>
+                    <p>
+                      Technical testing 3 2015-09-01
+                      <a class="timeBtn">点击查看</a>
+                    </p>
+                  </a-timeline-item>
+                  <a-timeline-item color="gray">
+                    <h3>后天（3月31日 星期一）</h3>
+                    <p>
+                      Technical testing 2
+                      <a class="timeBtn">点击查看</a>
+                    </p>
+                    <p>
+                      Technical testing 3 2015-09-01
+                      <a class="timeBtn">点击查看</a>
+                    </p>
+                  </a-timeline-item>
+                </a-timeline>
+              </div>
+            </a-col>
+          </a-row>
         </div>
       </div>
     </div>
@@ -154,44 +127,32 @@
       <div class="threeContent">
         <h2>文都管联研究院当季热销课程</h2>
         <h3>直播课程、面授课程、集训课程、1对1课程，管联名师，总有一款适合你</h3>
-        <el-row type="flex" justify="center">
-          <el-col :span="6">
+        <a-row type="flex" justify="center">
+          <a-col :span="6">
             <div>
-              <el-image
-                style="width: 270px; height: 200px"
-                :src="require('../../assets/image/part3_bg01.png')"
-              ></el-image>
+              <img style="width: 270px; height: 200px" src="../../assets/image/part3_bg01.png" />
               <div class="picName">直播OR面试，退费保障</div>
               <div class="picTitle">在职生笔试课程</div>
             </div>
-          </el-col>
-          <el-col :span="6">
+          </a-col>
+          <a-col :span="6">
             <div>
-              <el-image
-                style="width: 270px; height: 200px"
-                :src="require('../../assets/image/part3_bg02.png')"
-              ></el-image>
+              <img style="width: 270px; height: 200px" src="../../assets/image/part3_bg02.png" />
               <div class="picName">直播OR面试，退费保障</div>
               <div class="picTitle">在职生提面课程</div>
             </div>
-          </el-col>
-          <el-col :span="6">
-            <el-image
-              style="width: 270px; height: 200px"
-              :src="require('../../assets/image/part3_bg03.png')"
-            ></el-image>
+          </a-col>
+          <a-col :span="6">
+            <img style="width: 270px; height: 200px" src="../../assets/image/part3_bg03.png" />
             <div class="picName">直播OR面试，退费保障</div>
             <div class="picTitle">在校生直播课程</div>
-          </el-col>
-          <el-col :span="6">
-            <el-image
-              style="width: 270px; height: 200px"
-              :src="require('../../assets/image/part3_bg04.png')"
-            ></el-image>
+          </a-col>
+          <a-col :span="6">
+            <img style="width: 270px; height: 200px" src="../../assets/image/part3_bg04.png" />
             <div class="picName">直播OR面试，退费保障</div>
             <div class="picTitle">管联集训营课程</div>
-          </el-col>
-        </el-row>
+          </a-col>
+        </a-row>
       </div>
     </div>
     <div class="partFourContent">
@@ -199,9 +160,9 @@
         <h2>清北复交毕业全职讲师</h2>
         <h3>专业的管联团队，包括英语二、初等数学、逻辑和写作专职教师教研讲师。</h3>
         <div class="banner">
-          <el-carousel :interval="3000" arrow="always" height="250px">
-            <el-carousel-item class="bannerItem">
-              <div class="sliderTeracher">
+          <a-carousel :interval="3000" height="250px" autoplay arrow>
+            <div class="bannerItem">
+              <div class="sliderTeacher">
                 <img src="../../assets/image/part04_pic_zhangxiaoxv.png" alt />
                 <div class="teacherText">
                   <p>
@@ -213,9 +174,9 @@
                   >具有12年管理类联考授课经验。总结归纳20余年逻辑写作真题,熟悉真题命题规则，善于预测当年真题考点。在教学上富有激情,具有感染力,语言亲切、幽默,深受广大学生欢迎。</p>
                 </div>
               </div>
-            </el-carousel-item>
-            <el-carousel-item class="bannerItem">
-              <div class="sliderTeracher">
+            </div>
+            <div class="bannerItem">
+              <div class="sliderTeacher">
                 <img src="../../assets/image/part04_pic_krishu.png" alt />
                 <div class="teacherText">
                   <p>
@@ -227,9 +188,9 @@
                   >对英语二提分有着独特的方法,可以让学生少背单词，快速高效的提分。上课时关注在职考生的基础，讲课通俗易懂，保证活跃的课堂氛围，课堂中学生所学即能满足考试要求，无需投入更多时间。</p>
                 </div>
               </div>
-            </el-carousel-item>
-            <el-carousel-item class="bannerItem">
-              <div class="sliderTeracher">
+            </div>
+            <div class="bannerItem">
+              <div class="sliderTeacher">
                 <img src="../../assets/image/part04_pic_wangdong.png" alt />
                 <div class="teacherText">
                   <p>
@@ -241,9 +202,9 @@
                   >现任央企中国西电集团有限公司中央研究院商务技术经理，具备丰富的面试实战经验。曾作为管理团队成员负责过多项国家级智能制造和工业互联网专项，并编制相关领域行业标准。负责了百亿级西电智慧工业园区智慧、共享方案的规划。2018年曾访学于美国德克萨斯州立大学。</p>
                 </div>
               </div>
-            </el-carousel-item>
-            <el-carousel-item class="bannerItem">
-              <div class="sliderTeracher">
+            </div>
+            <div class="bannerItem">
+              <div class="sliderTeacher">
                 <img src="../../assets/image/part04_pic_wudi.png" alt />
                 <div class="teacherText">
                   <p>
@@ -255,9 +216,9 @@
                   >知识储备雄厚，熟悉管理类联考数学真题出题特点，在数学考试中为学生指明方向节省时间。授课思路清晰，重点突出，针对不同基础学员因材施教，进行针对性辅导，确保任何基础的学生都能够听懂学会。</p>
                 </div>
               </div>
-            </el-carousel-item>
-            <el-carousel-item class="bannerItem">
-              <div class="sliderTeracher">
+            </div>
+            <div class="bannerItem">
+              <div class="sliderTeacher">
                 <img src="../../assets/image/part04_pic_suishaolong.png" alt />
                 <div class="teacherText">
                   <p>
@@ -270,9 +231,9 @@
                   </p>
                 </div>
               </div>
-            </el-carousel-item>
-            <el-carousel-item class="bannerItem">
-              <div class="sliderTeracher">
+            </div>
+            <div class="bannerItem">
+              <div class="sliderTeacher">
                 <img src="../../assets/image/part04_pic_liyang.png" alt />
                 <div class="teacherText">
                   <p>
@@ -284,9 +245,9 @@
                   >文都管联研究院院长，亲自负责MBA面试授课。曾任美国人工智能roboterra.inc公司华南区总经理，具备丰富的面试实战经验，多次参与大型商务谈判和创业面试路演活动“西安市人民检察院建筑智能化商务合同”“广东省青少年宫协会福彩育苗计划”“北京大学光华管理学院创业孵化营。</p>
                 </div>
               </div>
-            </el-carousel-item>
-            <el-carousel-item class="bannerItem">
-              <div class="sliderTeracher">
+            </div>
+            <div class="bannerItem">
+              <div class="sliderTeacher">
                 <img src="../../assets/image/part04_pic_zhangyao.png" alt />
                 <div class="teacherText">
                   <p>
@@ -299,8 +260,8 @@
                   </p>
                 </div>
               </div>
-            </el-carousel-item>
-          </el-carousel>
+            </div>
+          </a-carousel>
         </div>
       </div>
     </div>
@@ -328,6 +289,308 @@
               <span>{{item.text}}</span>
             </swiper-slide>
           </swiper>
+        </div>
+      </div>
+    </div>
+    <div class="partSix">
+      <div class="partSixContent">
+        <h2>选择文都管联研究院，你只需安心学习</h2>
+        <h3>为学员提供主讲老师、学管老师、助教老师3V1一体化服务，文都管联研究院361°服务，助你高分成硕</h3>
+        <div class="interduce">
+          <div class="interduceItem">
+            <h2>23年</h2>
+            <span>学课教学经验</span>
+          </div>
+          <a-divider type="vertical" class="a-divider" />
+          <div class="interduceItem">
+            <h2>4%</h2>
+            <span>专职教师录取率</span>
+          </div>
+          <a-divider type="vertical" class="a-divider" />
+          <div class="interduceItem">
+            <h2>100%</h2>
+            <span>无障碍退费保证</span>
+          </div>
+          <a-divider type="vertical" class="a-divider" />
+          <div class="interduceItem">
+            <h2>200,000+</h2>
+            <span>累计服务学员</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="partSeven">
+      <div class="partSevenContent">
+        <h2>文都管联权威资料下载，关注您关注的问题资讯</h2>
+        <h3>为学员提供权威的考研资料及相关资讯服务，让学员学习无忧</h3>
+        <!-- emmm bullshit  -->
+        <div class="bullshit">
+          <div class="bullshitCard">
+            <img src="../../assets/image/part2_pic_card1.png" alt />
+            <div class="bullshit__info">
+              <p>关于MBA基本问题</p>
+              <ul class="contentList">
+                <li>
+                  <span class="redDisc"></span>
+                  <a>MBA报考条件是？</a>
+                </li>
+                <li>
+                  <span class="redDisc"></span>
+                  <a>报考MBA的好处有哪些？</a>
+                </li>
+                <li>
+                  <span class="redDisc"></span>
+                  <a>不同年龄段读MBA的优势和劣势有哪些？</a>
+                </li>
+                <li>
+                  <span class="redDisc"></span>
+                  <a>MBA 全日制和非全日制的区别？</a>
+                </li>
+              </ul>
+              <a class="knowMore">了解更多+</a>
+            </div>
+          </div>
+          <div class="bullshitCard">
+            <img src="../../assets/image/part2_pic_card2.png" alt />
+            <div class="bullshit__info">
+              <p>关于MBA基本问题</p>
+              <ul class="contentList">
+                <li>
+                  <span class="redDisc"></span>
+                  <a>MBA报考条件是？</a>
+                </li>
+                <li>
+                  <span class="redDisc"></span>
+                  <a>报考MBA的好处有哪些？</a>
+                </li>
+                <li>
+                  <span class="redDisc"></span>
+                  <a>不同年龄段读MBA的优势和劣势有哪些？</a>
+                </li>
+                <li>
+                  <span class="redDisc"></span>
+                  <a>MBA 全日制和非全日制的区别？</a>
+                </li>
+              </ul>
+              <a class="knowMore">了解更多+</a>
+            </div>
+          </div>
+          <div class="bullshitCard">
+            <img src="../../assets/image/part2_pic_card3.png" alt />
+            <div class="bullshit__info">
+              <p>关于MBA基本问题</p>
+              <ul class="contentList">
+                <li>
+                  <span class="redDisc"></span>
+                  <a>MBA报考条件是？</a>
+                </li>
+                <li>
+                  <span class="redDisc"></span>
+                  <a>报考MBA的好处有哪些？</a>
+                </li>
+                <li>
+                  <span class="redDisc"></span>
+                  <a>不同年龄段读MBA的优势和劣势有哪些？</a>
+                </li>
+                <li>
+                  <span class="redDisc"></span>
+                  <a>MBA 全日制和非全日制的区别？</a>
+                </li>
+              </ul>
+              <a class="knowMore">了解更多+</a>
+            </div>
+          </div>
+          <div class="bullshitCard">
+            <img src="../../assets/image/part2_pic_card4.png" alt />
+            <div class="bullshit__info">
+              <p>关于MBA基本问题</p>
+              <ul class="contentList">
+                <li>
+                  <span class="redDisc"></span>
+                  <a>MBA报考条件是？</a>
+                </li>
+                <li>
+                  <span class="redDisc"></span>
+                  <a>报考MBA的好处有哪些？</a>
+                </li>
+                <li>
+                  <span class="redDisc"></span>
+                  <a>不同年龄段读MBA的优势和劣势有哪些？</a>
+                </li>
+                <li>
+                  <span class="redDisc"></span>
+                  <a>MBA 全日制和非全日制的区别？</a>
+                </li>
+              </ul>
+              <a class="knowMore">了解更多+</a>
+            </div>
+          </div>
+        </div>
+        <div class="material">
+          <div class="materialCard">
+            <img src="../../assets/image/part06_bg003_normat.png" alt />
+            <div class="cardText">
+              <p>2021年MBA备考白皮书</p>
+              <div>
+                <div class="pdfText">
+                  <span>89007人领取</span>
+                  <a>在线领取</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="materialCard">
+            <img src="../../assets/image/part06_bg02_normat.png" alt />
+            <div class="cardText">
+              <p>2021年MBA备考白皮书</p>
+              <div>
+                <div class="pdfText">
+                  <span>89007人领取</span>
+                  <a>在线领取</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="materialCard">
+            <img src="../../assets/image/part06_bg05_normat.png" alt />
+            <div class="cardText">
+              <p>2021年MBA备考白皮书</p>
+              <div>
+                <div class="pdfText">
+                  <span>89007人领取</span>
+                  <a>在线领取</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="materialCard">
+            <img src="../../assets/image/part06_bg09_normat.png" alt />
+            <div class="cardText">
+              <p>2021年MBA备考白皮书</p>
+              <div>
+                <div class="pdfText">
+                  <span>89007人领取</span>
+                  <a>在线领取</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="materialCard">
+            <img src="../../assets/image/part06_bg06_normat.png" alt />
+            <div class="cardText">
+              <p>2021年MBA备考白皮书</p>
+              <div>
+                <div class="pdfText">
+                  <span>89007人领取</span>
+                  <a>在线领取</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="materialCard">
+            <img src="../../assets/image/part06_bg008_normat.png" alt />
+            <div class="cardText">
+              <p>2021年MBA备考白皮书</p>
+              <div>
+                <div class="pdfText">
+                  <span>89007人领取</span>
+                  <a>在线领取</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="freeBtn">免费获取更多资料</button>
+      </div>
+    </div>
+    <div class="partEight">
+      <div class="partEightContent">
+        <h2>我们的承诺</h2>
+        <div class="interduce">
+          <div class="interduceItem">
+            <h2>退费承诺</h2>
+            <span>付费后，每位学员都会与文都签订一份协议，我们向报考协议班的学员承诺未通过相关要求有退费的保障</span>
+          </div>
+          <a-divider type="vertical" class="a-divider" />
+          <div class="interduceItem">
+            <h2>师资承诺</h2>
+            <span>文都管联研究院承诺“管联名校师资”，保证优质教学服务</span>
+          </div>
+          <a-divider type="vertical" class="a-divider" />
+          <div class="interduceItem">
+            <h2>服务承诺</h2>
+            <span>报考文都管联院课程的学员，我们通过三位一体（讲师、助教、学管向学员保证服务水平）</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="partNine">
+      <div class="partNineContent">
+        <h2>预约试听，享受高端一对一服务</h2>
+        <a-form-model :model="form">
+          <a-row type="flex" justify="center" :gutter="20">
+            <a-col :span="6">
+              <a-form-model-item>
+                <a-select v-model="form.region" placeholder="请选择试听科目">
+                  <a-select-option value="shanghai">Zone one</a-select-option>
+                  <a-select-option value="beijing">Zone two</a-select-option>
+                </a-select>
+              </a-form-model-item>
+            </a-col>
+            <a-col :span="6">
+              <a-form-model-item>
+                <a-select v-model="form.region" placeholder="请选择报考专业">
+                  <a-select-option value="shanghai">Zone one</a-select-option>
+                  <a-select-option value="beijing">Zone two</a-select-option>
+                </a-select>
+              </a-form-model-item>
+            </a-col>
+          </a-row>
+          <a-row type="flex" justify="center" :gutter="20">
+            <a-col :span="6">
+              <a-form-model-item>
+                <a-input
+                  type="text"
+                  v-model="form.name"
+                  placeholder="请选择输入姓名"
+                  prefix-icon="el-icon-user"
+                ></a-input>
+              </a-form-model-item>
+            </a-col>
+            <a-col :span="6">
+              <a-form-model-item>
+                <a-input
+                  type="text"
+                  v-model="form.telephone"
+                  placeholder="请选择输入手机号"
+                  prefix-icon="el-icon-mobile"
+                ></a-input>
+              </a-form-model-item>
+            </a-col>
+          </a-row>
+          <a-row type="flex" justify="center">
+            <a-col :span="3">
+              <a-form-model-item>
+                <a-button class="freeBtn">立即预约</a-button>
+              </a-form-model-item>
+            </a-col>
+          </a-row>
+        </a-form-model>
+      </div>
+    </div>
+    <div class="partTen">
+      <div class="imgLeft">
+        <img src="../../assets/image/part10_left.png" />
+      </div>
+      <div class="tenRight">
+        <div class="nineLeft">
+          <h3>公开课免费学，先体验，再报名</h3>
+          <hr />
+          <p>全套课程，涵盖英语、数学、逻辑、写作以及提前面试。还有随堂作业，巩固课程知识点，即可体验。</p>
+          <button>了解详情</button>
+        </div>
+        <div class="nineRight">
+          <img src="../../assets/image/part09_pic.png" alt />
         </div>
       </div>
     </div>
@@ -439,16 +702,27 @@ export default {
         direction: "horizontal", // 滑动的方向(水平方向)
         loop: true, // 是否循环
         autoplay: {
-          delay: 4000, // 自动播放的时长
+          delay: 400000, // 自动播放的时长
           disableOnInteraction: true
         },
         speed: 1500,
         slidesPerView: 5, // 设置可视区一共显示几张图片,设置auto,设置auto为自适应;
         centeredSlides: true, // 设置为true时,带有active-slide类名的图片会居中
         spaceBetween: 2 //  每张图片之间的间隔
-      }
+      },
+      form: {
+        name: "",
+        region: undefined,
+        date1: undefined,
+        delivery: false,
+        type: [],
+        resource: "",
+        desc: ""
+      },
+      deadline: Date.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30
     }
   },
+  methods: {},
 
   mounted() {
     // 监听窗口变化，使得轮播图高度自适应图片高度

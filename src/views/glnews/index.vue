@@ -1,47 +1,22 @@
 <template>
-  <div>
-    <el-row type="flex" justify="center">
-      <div class="topMes">
-        <el-col class="leftMes" :span="16">
-          <h2>管联资讯管联资讯管联资讯</h2>
-          <h3>讲师、助教、学管老师全程护航，深度互动，全力做好学员每时每刻学习辅导</h3>
-        </el-col>
-        <el-col :span="8">
-          <el-card class="login-form-layout">
-            <el-form autocomplete="on" :model="loginForm" ref="loginForm" label-position="left">
-              <div class="title">
-                <h2 class="login-title">立刻预约助教免费1V1答疑</h2>
-              </div>
-              <div key="account" class="accountLogin">
-                <el-form-item prop="username">
-                  <el-input
-                    name="username"
-                    type="text"
-                    prefix-icon="el-icon-user-solid"
-                    v-model="loginForm.username"
-                    autocomplete="on"
-                    placeholder="请输入用户名"
-                  ></el-input>
-                </el-form-item>
-                <el-form-item prop="password">
-                  <el-input
-                    name="password"
-                    show-password
-                    prefix-icon="el-icon-key"
-                    v-model="loginForm.password"
-                    autocomplete="on"
-                    placeholder="请输入密码"
-                  ></el-input>
-                </el-form-item>
-              </div>
-              <el-form-item style="margin-bottom: 20px;text-align: center">
-                <el-button style="width: 99%" type="primary">立刻报名</el-button>
-              </el-form-item>
-            </el-form>
-          </el-card>
-        </el-col>
+  <div class="news">
+    <div class="newsTopMes"></div>
+    <div class="partOne">
+      <div class="partOneContent">
+        <a-list itemLayout="horizontal" :dataSource="listData" size="large" :pagination="pagination">
+          <a-list-item slot="renderItem" slot-scope="item">
+            <a-list-item-meta :description="item.description">
+              <a slot="title" href="https://www.antdv.com/">{{ item.title }}</a>
+              <a-avatar
+              style="width:290px;height:158px;border-radius:0"
+                slot="avatar"
+                :src="item.avatar"
+              />
+            </a-list-item-meta>
+          </a-list-item>
+        </a-list>
       </div>
-    </el-row>
+    </div>
   </div>
 </template>
 
@@ -52,33 +27,56 @@ export default {
       loginForm: {
         username: "",
         password: ""
-      }
+      },
+      listData: [
+        {
+          title: `ant design vue part`,
+          avatar: require("../../assets/image/service/part3_1.png"),
+          description:
+            "Ant Design, a design language for background applications, is refined by Ant UED Team."
+        },
+        {
+          title: `ant design vue part`,
+          avatar: require("../../assets/image/service/part3_2.png"),
+          description:
+            "Ant Design, a design language for background applications, is refined by Ant UED Team."
+        },
+        {
+          title: `ant design vue part`,
+          avatar: require("../../assets/image/service/part3_3.png"),
+          description:
+            "Ant Design, a design language for background applications, is refined by Ant UED Team."
+        },
+        {
+          title: `ant design vue part`,
+          avatar: require("../../assets/image/service/part3_4.png"),
+          description:
+            "Ant Design, a design language for background applications, is refined by Ant UED Team."
+        },
+        {
+          title: `ant design vue part`,
+          avatar: require("../../assets/image/service/part3_4.png"),
+          description:
+            "Ant Design, a design language for background applications, is refined by Ant UED Team."
+        },
+        {
+          title: `ant design vue part`,
+          avatar: require("../../assets/image/service/part3_4.png"),
+          description:
+            "Ant Design, a design language for background applications, is refined by Ant UED Team."
+        },
+      ],
+      pagination: {
+        onChange: page => {
+          console.log(page)
+        },
+        pageSize: 4
+      },
     }
   }
 }
 </script>
 
-<style lang="less">
-.topMes {
-  width: 100%;
-  height: 340px;
-  background: url("../../assets/image/login_center_bg.png") no-repeat center
-    center;
-  background-color: #ff8f8fcb;
-  display: flex;
-  align-items: center;
-  .leftMes {
-    color: white;
-    margin-left: 60px;
-    h2 {
-      font-size: 30px;
-    }
-  }
-  .login-form-layout {
-    width: 80%;
-    h2 {
-      text-align: center;
-    }
-  }
-}
+<style lang="less" scoped>
+@import url(../../assets/less/news.less);
 </style>

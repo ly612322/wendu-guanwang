@@ -3,9 +3,72 @@ body {
   height: 100vh
 }
 
+.ant-menu-horizontal>.ant-menu-item:hover,
+.ant-menu-horizontal>.ant-menu-submenu:hover,
+.ant-menu-horizontal>.ant-menu-item-active,
+.ant-menu-horizontal>.ant-menu-submenu-active,
+.ant-menu-horizontal>.ant-menu-item-open,
+.ant-menu-horizontal>.ant-menu-submenu-open,
+.ant-menu-horizontal>.ant-menu-item-selected,
+.ant-menu-horizontal>.ant-menu-submenu-selected {
+  color: #b20d15 !important;
+  border-bottom: 2px solid #b20d15 !important;
+  width: 55px;
+  text-align: center;
+
+}
+
+.ant-menu-horizontal>.ant-menu-item:hover>a:hover {
+  color: #b20d15 !important;
+}
+
+.ant-menu-item:hover,
+.ant-menu-item-active,
+.ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+.ant-menu-submenu-active,
+.ant-menu-submenu-title:hover {
+  color: #b20d15 !important;
+
+}
+
+.ant-menu-item:hover>a:hover {
+  color: #b20d15 !important;
+}
+
+.ant-menu-horizontal>.ant-menu-item-selected>a {
+  color: #b20d15 !important;
+}
+
+.ant-menu-item {
+  margin: 0 25px;
+  padding: 0 10px;
+}
+
+.ant-menu-submenu-title{
+  padding: 0;
+}
+
+.ant-menu-horizontal>.ant-menu-item,
+.ant-menu-horizontal>.ant-menu-submenu {
+  padding: 0;
+  margin: 0 25px;
+  width: 55px;
+  text-align: center;
+}
+
+//倒计时
+.ant-statistic-content {
+  color: white !important;
+  font-size: 20px;
+}
+
+
+
+
 
 
 //item 右侧划入动画
+
 .item-enter,
 .item-leave-to {
   transform: translateX(30px);
@@ -34,9 +97,9 @@ body {
 // 滚动条
 ::-webkit-scrollbar {
   width: 5px;
-  background-color: #d8d8d8;
+  background-color: #ffffff00;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: rgb(151, 151, 151);
 }
-

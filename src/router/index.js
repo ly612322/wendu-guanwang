@@ -72,71 +72,17 @@ const routes = [{
     }]
   },
   {
-    path: '/plan',
+    path: '/audition',
     component: layout,
     meta: {
       keepAlive: true
     },
     children: [{
-      path: '/plan',
-      component: () => import('../views/audition/plan')
+      path: '/audition',
+      component: () => import('../views/audition/index')
     }]
   },
-  {
-    path: '/logic',
-    component: layout,
-    meta: {
-      keepAlive: true
-    },
-    children: [{
-      path: '/logic',
-      component: () => import('../views/audition/logic')
-    }]
-  },
-  {
-    path: '/math',
-    component: layout,
-    meta: {
-      keepAlive: true
-    },
-    children: [{
-      path: '/math',
-      component: () => import('../views/audition/math')
-    }]
-  },
-  {
-    path: '/english',
-    component: layout,
-    meta: {
-      keepAlive: true
-    },
-    children: [{
-      path: '/english',
-      component: () => import('../views/audition/english')
-    }]
-  },
-  {
-    path: '/write',
-    component: layout,
-    meta: {
-      keepAlive: true
-    },
-    children: [{
-      path: '/write',
-      component: () => import('../views/audition/write')
-    }]
-  },
-  {
-    path: '/oneOnone',
-    component: layout,
-    meta: {
-      keepAlive: true
-    },
-    children: [{
-      path: '/oneOnone',
-      component: () => import('../views/audition/oneOnone')
-    }]
-  },
+
   {
     path: '/about',
     component: layout,

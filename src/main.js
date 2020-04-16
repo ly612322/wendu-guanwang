@@ -9,78 +9,49 @@ import common from './utils/common'
 import qs from 'qs'
 import './permission'
 import 'default-passive-events'
-import ECharts from 'vue-echarts'
-import 'echarts/lib/chart/bar'
-import 'echarts/lib/component/tooltip'
-import 'echarts/lib/component/toolbox'
-import 'echarts/lib/component/markPoint'
-import 'echarts/lib/component/legend'
-// import 'echarts/lib/component/dataZoom'
-// import 'echarts/lib/component/polar'
-// import 'echarts/lib/component/legend'
-import 'echarts/lib/component/title.js'
 import animate from 'animate.css'
 Vue.use(animate)
-Vue.component('chart', ECharts)
-import {
-  Menu,
-  Submenu,
-  MenuItem,
-  MenuItemGroup,
-  Button,
-  Icon,
-  Card,
-  Row,
-  Form,
-  FormItem,
-  Input,
-  Col,
-  Carousel,
-  CarouselItem,
-  Container,
-  Header,
-  Main,
-  Footer,
-  Timeline,
-  TimelineItem,
-  Link,
-  Divider,
-  Image,
-  Drawer
-
-} from 'element-ui';
-
-Vue.use(Menu);
-Vue.use(Submenu);
-Vue.use(MenuItem);
-Vue.use(MenuItemGroup);
-Vue.use(Button);
-Vue.use(Drawer);
-Vue.use(Icon);
-Vue.use(Row);
-Vue.use(Col);
-Vue.use(Card);
-Vue.use(Form);
-Vue.use(FormItem);
-Vue.use(Input);
-Vue.use(Carousel);
-Vue.use(CarouselItem);
-Vue.use(Container);
-Vue.use(Header);
-Vue.use(Main);
-Vue.use(Footer);
-Vue.use(Timeline);
-Vue.use(TimelineItem);
-Vue.use(Link);
-Vue.use(Divider);
-Vue.use(Image);
 
 import './mock'
-import 'element-ui/lib/theme-chalk/display.css';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 Vue.use(VueAwesomeSwiper);
 import 'swiper/css/swiper.css';
 
+import {
+  Button,
+  Row,
+  Col,
+  Layout,
+  Menu,
+  Drawer,
+  Carousel,
+  Timeline,
+  FormModel,
+  Select,
+  Input,
+  Divider,
+  Statistic,
+  Card,
+  List,
+  Avatar
+
+} from 'ant-design-vue';
+Vue.use(Button)
+Vue.use(Row)
+Vue.use(Col)
+Vue.use(Layout)
+Vue.use(Menu)
+Vue.use(Drawer)
+Vue.use(Carousel)
+Vue.use(Timeline);
+Vue.use(FormModel);
+Vue.use(Select);
+Vue.use(Input);
+Vue.use(Divider);
+Vue.use(Statistic);
+Vue.use(Card);
+Vue.use(List);
+Vue.use(Avatar);
 
 // 配置请求根路径
 // axios.defaults.baseURL = 'http://10.1.10.1234'

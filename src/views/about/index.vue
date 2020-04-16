@@ -35,7 +35,7 @@
                 </el-form-item>
               </div>
               <el-form-item style="margin-bottom: 20px;text-align: center">
-                <el-button style="width: 99%" type="primary">立刻报名</el-button>
+                <a-button style="width: 99%" type="primary">立刻报名</a-button>
               </el-form-item>
             </el-form>
           </el-card>
