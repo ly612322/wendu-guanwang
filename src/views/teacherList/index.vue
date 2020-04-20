@@ -252,6 +252,7 @@
         </div>
       </div>
     </div>
+    <pagefooter></pagefooter>
   </div>
 </template>
 

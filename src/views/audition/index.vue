@@ -46,69 +46,41 @@
     <div class="partOne">
       <div class="partOneContent">
         <h2>免费试听课程</h2>
-
         <div class="card-container">
           <a-tabs type="card">
             <a-tab-pane tab="规划课" key="1">
               <a-row :gutter="[16,16]">
                 <a-col :span="8">
-                  <a-card hoverable style="width: 300px">
-                    <img
-                      alt="example"
-                      src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                      slot="cover"
-                    />
+                  <a-card title="2021届管理类联考院校规划试听课" style="width: 300px">
                     <template class="ant-card-actions" slot="actions">
-                      <a-icon type="setting" key="setting" />
-                      <a-icon type="edit" key="edit" />
-                      <a-icon type="ellipsis" key="ellipsis" />
+                      <span>立即预约</span>
                     </template>
-                    <a-card-meta title="Card title" description="This is the description">
-                      <a-avatar
-                        slot="avatar"
-                        src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                      />
+                    <a-card-meta title="张晓旭" description style="height:84px">
+                      <a-avatar slot="avatar" :src="header" />
                     </a-card-meta>
+                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
                   </a-card>
                 </a-col>
                 <a-col :span="8">
-                  <a-card hoverable style="width: 300px">
-                    <img
-                      alt="example"
-                      src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                      slot="cover"
-                    />
+                  <a-card title="2021届管理类联考院校规划试听课" style="width: 300px">
                     <template class="ant-card-actions" slot="actions">
-                      <a-icon type="setting" key="setting" />
-                      <a-icon type="edit" key="edit" />
-                      <a-icon type="ellipsis" key="ellipsis" />
+                      <span>立即预约</span>
                     </template>
-                    <a-card-meta title="Card title" description="This is the description">
-                      <a-avatar
-                        slot="avatar"
-                        src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                      />
+                    <a-card-meta title="张晓旭" description style="height:84px">
+                      <a-avatar slot="avatar" :src="header" />
                     </a-card-meta>
+                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
                   </a-card>
                 </a-col>
                 <a-col :span="8">
-                  <a-card hoverable style="width: 300px">
-                    <img
-                      alt="example"
-                      src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                      slot="cover"
-                    />
+                  <a-card title="2021届管理类联考院校规划试听课" style="width: 300px">
                     <template class="ant-card-actions" slot="actions">
-                      <a-icon type="setting" key="setting" />
-                      <a-icon type="edit" key="edit" />
-                      <a-icon type="ellipsis" key="ellipsis" />
+                      <span>立即预约</span>
                     </template>
-                    <a-card-meta title="Card title" description="This is the description">
-                      <a-avatar
-                        slot="avatar"
-                        src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                      />
+                    <a-card-meta title="张晓旭" description style="height:84px">
+                      <a-avatar slot="avatar" :src="header" />
                     </a-card-meta>
+                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
                   </a-card>
                 </a-col>
               </a-row>
@@ -116,63 +88,36 @@
             <a-tab-pane tab="管综专业课" key="2">
               <a-row :gutter="[16,16]">
                 <a-col :span="8">
-                  <a-card hoverable style="width: 300px">
-                    <img
-                      alt="example"
-                      src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                      slot="cover"
-                    />
+                  <a-card title="2021届管理类联考管综逻辑试听课" style="width: 300px">
                     <template class="ant-card-actions" slot="actions">
-                      <a-icon type="setting" key="setting" />
-                      <a-icon type="edit" key="edit" />
-                      <a-icon type="ellipsis" key="ellipsis" />
+                      <span>立即预约</span>
                     </template>
-                    <a-card-meta title="Card title" description="This is the description">
-                      <a-avatar
-                        slot="avatar"
-                        src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                      />
+                    <a-card-meta title="张晓旭" description style="height:84px">
+                      <a-avatar slot="avatar" :src="header" />
                     </a-card-meta>
+                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
                   </a-card>
                 </a-col>
                 <a-col :span="8">
-                  <a-card hoverable style="width: 300px">
-                    <img
-                      alt="example"
-                      src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                      slot="cover"
-                    />
+                  <a-card title="2021届管理类联考管综逻辑试听课" style="width: 300px">
                     <template class="ant-card-actions" slot="actions">
-                      <a-icon type="setting" key="setting" />
-                      <a-icon type="edit" key="edit" />
-                      <a-icon type="ellipsis" key="ellipsis" />
+                      <span>立即预约</span>
                     </template>
-                    <a-card-meta title="Card title" description="This is the description">
-                      <a-avatar
-                        slot="avatar"
-                        src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                      />
+                    <a-card-meta title="张晓旭" description style="height:84px">
+                      <a-avatar slot="avatar" :src="header" />
                     </a-card-meta>
+                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
                   </a-card>
                 </a-col>
                 <a-col :span="8">
-                  <a-card hoverable style="width: 300px">
-                    <img
-                      alt="example"
-                      src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                      slot="cover"
-                    />
+                  <a-card title="2021届管理类联考管综逻辑试听课" style="width: 300px">
                     <template class="ant-card-actions" slot="actions">
-                      <a-icon type="setting" key="setting" />
-                      <a-icon type="edit" key="edit" />
-                      <a-icon type="ellipsis" key="ellipsis" />
+                      <span>立即预约</span>
                     </template>
-                    <a-card-meta title="Card title" description="This is the description">
-                      <a-avatar
-                        slot="avatar"
-                        src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                      />
+                    <a-card-meta title="张晓旭" description style="height:84px">
+                      <a-avatar slot="avatar" :src="header" />
                     </a-card-meta>
+                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
                   </a-card>
                 </a-col>
               </a-row>
@@ -180,63 +125,36 @@
             <a-tab-pane tab="英语二" key="3">
               <a-row :gutter="[16,16]">
                 <a-col :span="8">
-                  <a-card hoverable style="width: 300px">
-                    <img
-                      alt="example"
-                      src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                      slot="cover"
-                    />
+                  <a-card title="2021届管理类联考英语二试听课" style="width: 300px">
                     <template class="ant-card-actions" slot="actions">
-                      <a-icon type="setting" key="setting" />
-                      <a-icon type="edit" key="edit" />
-                      <a-icon type="ellipsis" key="ellipsis" />
+                      <span>立即预约</span>
                     </template>
-                    <a-card-meta title="Card title" description="This is the description">
-                      <a-avatar
-                        slot="avatar"
-                        src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                      />
+                    <a-card-meta title="张晓旭" description style="height:84px">
+                      <a-avatar slot="avatar" :src="header" />
                     </a-card-meta>
+                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
                   </a-card>
                 </a-col>
                 <a-col :span="8">
-                  <a-card hoverable style="width: 300px">
-                    <img
-                      alt="example"
-                      src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                      slot="cover"
-                    />
+                  <a-card title="2021届管理类联考英语二试听课" style="width: 300px">
                     <template class="ant-card-actions" slot="actions">
-                      <a-icon type="setting" key="setting" />
-                      <a-icon type="edit" key="edit" />
-                      <a-icon type="ellipsis" key="ellipsis" />
+                      <span>立即预约</span>
                     </template>
-                    <a-card-meta title="Card title" description="This is the description">
-                      <a-avatar
-                        slot="avatar"
-                        src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                      />
+                    <a-card-meta title="张晓旭" description style="height:84px">
+                      <a-avatar slot="avatar" :src="header" />
                     </a-card-meta>
+                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
                   </a-card>
                 </a-col>
                 <a-col :span="8">
-                  <a-card hoverable style="width: 300px">
-                    <img
-                      alt="example"
-                      src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                      slot="cover"
-                    />
+                  <a-card title="2021届管理类联考英语二试听课" style="width: 300px">
                     <template class="ant-card-actions" slot="actions">
-                      <a-icon type="setting" key="setting" />
-                      <a-icon type="edit" key="edit" />
-                      <a-icon type="ellipsis" key="ellipsis" />
+                      <span>立即预约</span>
                     </template>
-                    <a-card-meta title="Card title" description="This is the description">
-                      <a-avatar
-                        slot="avatar"
-                        src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                      />
+                    <a-card-meta title="张晓旭" description style="height:84px">
+                      <a-avatar slot="avatar" :src="header" />
                     </a-card-meta>
+                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
                   </a-card>
                 </a-col>
               </a-row>
@@ -244,127 +162,73 @@
             <a-tab-pane tab="提前面试" key="4">
               <a-row :gutter="[16,16]">
                 <a-col :span="8">
-                  <a-card hoverable style="width: 300px">
-                    <img
-                      alt="example"
-                      src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                      slot="cover"
-                    />
+                  <a-card title="2021届管理类联考管综提面试听课" style="width: 300px">
                     <template class="ant-card-actions" slot="actions">
-                      <a-icon type="setting" key="setting" />
-                      <a-icon type="edit" key="edit" />
-                      <a-icon type="ellipsis" key="ellipsis" />
+                      <span>立即预约</span>
                     </template>
-                    <a-card-meta title="Card title" description="This is the description">
-                      <a-avatar
-                        slot="avatar"
-                        src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                      />
+                    <a-card-meta title="张晓旭" description style="height:84px">
+                      <a-avatar slot="avatar" :src="header" />
                     </a-card-meta>
+                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
                   </a-card>
                 </a-col>
                 <a-col :span="8">
-                  <a-card hoverable style="width: 300px">
-                    <img
-                      alt="example"
-                      src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                      slot="cover"
-                    />
+                  <a-card title="2021届管理类联考管综提面试听课" style="width: 300px">
                     <template class="ant-card-actions" slot="actions">
-                      <a-icon type="setting" key="setting" />
-                      <a-icon type="edit" key="edit" />
-                      <a-icon type="ellipsis" key="ellipsis" />
+                      <span>立即预约</span>
                     </template>
-                    <a-card-meta title="Card title" description="This is the description">
-                      <a-avatar
-                        slot="avatar"
-                        src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                      />
+                    <a-card-meta title="张晓旭" description style="height:84px">
+                      <a-avatar slot="avatar" :src="header" />
                     </a-card-meta>
+                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
                   </a-card>
                 </a-col>
                 <a-col :span="8">
-                  <a-card hoverable style="width: 300px">
-                    <img
-                      alt="example"
-                      src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                      slot="cover"
-                    />
+                  <a-card title="2021届管理类联考管综提面试听课" style="width: 300px">
                     <template class="ant-card-actions" slot="actions">
-                      <a-icon type="setting" key="setting" />
-                      <a-icon type="edit" key="edit" />
-                      <a-icon type="ellipsis" key="ellipsis" />
+                      <span>立即预约</span>
                     </template>
-                    <a-card-meta title="Card title" description="This is the description">
-                      <a-avatar
-                        slot="avatar"
-                        src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                      />
+                    <a-card-meta title="张晓旭" description style="height:84px">
+                      <a-avatar slot="avatar" :src="header" />
                     </a-card-meta>
+                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
                   </a-card>
                 </a-col>
               </a-row>
             </a-tab-pane>
-            <a-tab-pane tab="复试" key="5">
+            <a-tab-pane tab="1V1课程" key="5">
               <a-row :gutter="[16,16]">
                 <a-col :span="8">
-                  <a-card hoverable style="width: 300px">
-                    <img
-                      alt="example"
-                      src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                      slot="cover"
-                    />
+                  <a-card title="2021届管理类联考提面1V1试听课" style="width: 300px">
                     <template class="ant-card-actions" slot="actions">
-                      <a-icon type="setting" key="setting" />
-                      <a-icon type="edit" key="edit" />
-                      <a-icon type="ellipsis" key="ellipsis" />
+                      <span>立即预约</span>
                     </template>
-                    <a-card-meta title="Card title" description="This is the description">
-                      <a-avatar
-                        slot="avatar"
-                        src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                      />
+                    <a-card-meta title="张晓旭" description style="height:84px">
+                      <a-avatar slot="avatar" :src="header" />
                     </a-card-meta>
+                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
                   </a-card>
                 </a-col>
                 <a-col :span="8">
-                  <a-card hoverable style="width: 300px">
-                    <img
-                      alt="example"
-                      src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                      slot="cover"
-                    />
+                  <a-card title="2021届管理类联考提面1V1试听课" style="width: 300px">
                     <template class="ant-card-actions" slot="actions">
-                      <a-icon type="setting" key="setting" />
-                      <a-icon type="edit" key="edit" />
-                      <a-icon type="ellipsis" key="ellipsis" />
+                      <span>立即预约</span>
                     </template>
-                    <a-card-meta title="Card title" description="This is the description">
-                      <a-avatar
-                        slot="avatar"
-                        src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                      />
+                    <a-card-meta title="张晓旭" description style="height:84px">
+                      <a-avatar slot="avatar" :src="header" />
                     </a-card-meta>
+                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
                   </a-card>
                 </a-col>
                 <a-col :span="8">
-                  <a-card hoverable style="width: 300px">
-                    <img
-                      alt="example"
-                      src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                      slot="cover"
-                    />
+                  <a-card title="2021届管理类联考提面1V1试听课" style="width: 300px">
                     <template class="ant-card-actions" slot="actions">
-                      <a-icon type="setting" key="setting" />
-                      <a-icon type="edit" key="edit" />
-                      <a-icon type="ellipsis" key="ellipsis" />
+                      <span>立即预约</span>
                     </template>
-                    <a-card-meta title="Card title" description="This is the description">
-                      <a-avatar
-                        slot="avatar"
-                        src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                      />
+                    <a-card-meta title="张晓旭" description style="height:84px">
+                      <a-avatar slot="avatar" :src="header" />
                     </a-card-meta>
+                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
                   </a-card>
                 </a-col>
               </a-row>
@@ -377,43 +241,41 @@
       <div class="partNineContent">
         <h2>预约试听，享受高端一对一服务</h2>
         <a-form-model :model="form">
-          <a-row type="flex" justify="center" :gutter="20">
+          <a-row type="flex" justify="center" :gutter="40">
             <a-col :span="6">
               <a-form-model-item>
                 <a-select v-model="form.region" placeholder="请选择试听科目">
-                  <a-select-option value="shanghai">Zone one</a-select-option>
-                  <a-select-option value="beijing">Zone two</a-select-option>
+                  <a-select-option value="规划课">规划课</a-select-option>
+                  <a-select-option value="逻辑课">逻辑课</a-select-option>
+                  <a-select-option value="写作课">写作课</a-select-option>
+                  <a-select-option value="数学课">数学课</a-select-option>
+                  <a-select-option value="英语课">英语课</a-select-option>
                 </a-select>
               </a-form-model-item>
             </a-col>
             <a-col :span="6">
               <a-form-model-item>
-                <a-select v-model="form.region" placeholder="请选择报考专业">
-                  <a-select-option value="shanghai">Zone one</a-select-option>
-                  <a-select-option value="beijing">Zone two</a-select-option>
+                <a-select v-model="form.region" placeholder="请选择试听专业">
+                  <a-select-option value="MBA">MBA</a-select-option>
+                  <a-select-option value="MPA">MPA</a-select-option>
+                  <a-select-option value="MBM">MBM</a-select-option>
+                  <a-select-option value="MTA">MTA</a-select-option>
+                  <a-select-option value="MPAcc">MPAcc</a-select-option>
+                  <a-select-option value="Mlis">Mlis</a-select-option>
+                  <a-select-option value="MAud">MAud</a-select-option>
                 </a-select>
               </a-form-model-item>
             </a-col>
           </a-row>
-          <a-row type="flex" justify="center" :gutter="20">
+          <a-row type="flex" justify="center" :gutter="40">
             <a-col :span="6">
               <a-form-model-item>
-                <a-input
-                  type="text"
-                  v-model="form.name"
-                  placeholder="请选择输入姓名"
-                  prefix-icon="el-icon-user"
-                ></a-input>
+                <a-input type="text" v-model="form.name" placeholder="请输入姓名"></a-input>
               </a-form-model-item>
             </a-col>
             <a-col :span="6">
               <a-form-model-item>
-                <a-input
-                  type="text"
-                  v-model="form.telephone"
-                  placeholder="请选择输入手机号"
-                  prefix-icon="el-icon-mobile"
-                ></a-input>
+                <a-input type="text" v-model="form.telephone" placeholder="请输入手机号"></a-input>
               </a-form-model-item>
             </a-col>
           </a-row>
@@ -427,6 +289,7 @@
         </a-form-model>
       </div>
     </div>
+    <pagefooter></pagefooter>
   </div>
 </template>
 
@@ -438,13 +301,13 @@ export default {
         username: "",
         password: ""
       },
-          form: {
+      form: {
         name: "",
-        region: '',
-        course: '',
-        telephone:''
-   
+        region: undefined,
+        course: undefined,
+        telephone: ""
       },
+      header: require("../../assets/image/audition/teacher.png")
     }
   },
   methods: {

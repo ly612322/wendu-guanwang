@@ -2,74 +2,59 @@
   <div class="home">
     <a-row>
       <a-carousel :interval="5000" autoplay arrow class="carouselTop">
-        <div
-          slot="prevArrow"
-          class="custom-slick-arrow"
-          style="left: 10px;zIndex: 999;"
-        >
+        <div slot="prevArrow" class="custom-slick-arrow" style="left: 10px;zIndex: 999;">
           <a-icon type="left-circle" />
         </div>
-        <div
-          slot="nextArrow"
-          class="custom-slick-arrow"
-          style="right: 10px;zIndex: 999"
-        >
+        <div slot="nextArrow" class="custom-slick-arrow" style="right: 10px;zIndex: 999">
           <a-icon type="right-circle" />
         </div>
         <div class="bannerItem1"></div>
         <div class="bannerItem2"></div>
       </a-carousel>
     </a-row>
-    <transition mode="out-in" enter-active-class="animated zoomInDown">
-      <a-row type="flex" justify="center" style="flex-wrap: wrap;" class="partOne">
-        <a-col :span="5" class="partOneItem" :xs="12">
-          <div style="text-align:center">
-            <img style="width: 50px; height: 50px" src="../../assets/image/part1_icon1.png" />
-            <div>
-              <h3>大数据预测考点</h3>
-            </div>
+    <a-row type="flex" justify="center" style="flex-wrap: wrap;" class="partOne">
+      <a-col :span="5" class="partOneItem" :xs="12">
+        <div style="text-align:center;">
+          <img style="width: 50px; height: 50px" src="../../assets/image/part1_icon1.png" />
+          <div>
+            <h3>大数据预测考点</h3>
           </div>
-        </a-col>
-        <a-divider type="vertical" class="a-divider" />
-        <a-col :span="5" class="partOneItem" :xs="12">
-          <div style="text-align:center">
-            <img style="width: 50px; height: 50px" src="../../assets/image/part1_icon2.png" />
-            <div>
-              <h3>管联名师授课</h3>
-            </div>
+        </div>
+      </a-col>
+      <a-divider type="vertical" class="a-divider" />
+      <a-col :span="5" class="partOneItem" :xs="12">
+        <div style="text-align:center">
+          <img style="width: 50px; height: 50px" src="../../assets/image/part1_icon2.png" />
+          <div>
+            <h3>管联名师授课</h3>
           </div>
-        </a-col>
-        <a-divider type="vertical" class="a-divider" />
+        </div>
+      </a-col>
+      <a-divider type="vertical" class="a-divider" />
 
-        <a-col :span="5" class="partOneItem" :xs="12">
-          <div style="text-align:center">
-            <img style="width: 50px; height: 50px" src="../../assets/image/part1_icon3.png" />
-            <div>
-              <h3>3V1全程服务</h3>
-            </div>
+      <a-col :span="5" class="partOneItem" :xs="12">
+        <div style="text-align:center">
+          <img style="width: 50px; height: 50px" src="../../assets/image/part1_icon3.png" />
+          <div>
+            <h3>3V1全程服务</h3>
           </div>
-        </a-col>
-        <a-divider type="vertical" class="a-divider" />
-        <a-col :span="5" class="partOneItem" :xs="12">
-          <div style="text-align:center">
-            <img style="width: 50px; height: 50px" src="../../assets/image/part1_icon4.png" />
-            <div>
-              <h3>协议版型不过退费</h3>
-            </div>
+        </div>
+      </a-col>
+      <a-divider type="vertical" class="a-divider" />
+      <a-col :span="5" class="partOneItem" :xs="12">
+        <div style="text-align:center">
+          <img style="width: 50px; height: 50px" src="../../assets/image/part1_icon4.png" />
+          <div>
+            <h3>协议版型不过退费</h3>
           </div>
-        </a-col>
-      </a-row>
-    </transition>
-    <div class="partTwoContent">
-      <div class="partTwo">
-        <a-row>
-          <a-col>
-            <h2>文都管理类联考直播好课预告</h2>
-          </a-col>
-        </a-row>
-        <div class="twoContent">
-          <a-row type="flex" justify="center" :gutter="20" style="width:100%">
-            <a-col :span="6" class="courseImg hidden-xs-only">
+        </div>
+      </a-col>
+    </a-row>
+    <div class="partTwo">
+      <div class="partTwoContent">
+        <h2>文都管联研究院当季热销课程</h2>
+          <a-row type="flex" justify="center" :gutter="20" style="width:100%" class="content">
+            <a-col :span="6" class="courseImg ">
               <img style="width: 400px; height: 150px" src="../../assets/image/part2_pic.png" />
               <div class="title">MBA直播协议班课时名称</div>
               <div class="time">
@@ -82,7 +67,7 @@
             </a-col>
             <a-col :span="8" :xs="22" class="courseList">
               <div class="timeshow">
-                <a-timeline>
+                <a-timeline style="height:365px">
                   <a-timeline-item>
                     <h3>今天（3月30日 星期一）</h3>
                     <p>
@@ -121,7 +106,6 @@
             </a-col>
           </a-row>
         </div>
-      </div>
     </div>
     <div class="partThree">
       <div class="threeContent">
@@ -138,18 +122,18 @@
           <a-col :span="6">
             <div>
               <img style="width: 270px; height: 200px" src="../../assets/image/part3_bg02.png" />
-              <div class="picName">直播OR面试，退费保障</div>
+              <div class="picName">班课+1v1材料修改+3v1模拟面试+小组面试</div>
               <div class="picTitle">在职生提面课程</div>
             </div>
           </a-col>
           <a-col :span="6">
             <img style="width: 270px; height: 200px" src="../../assets/image/part3_bg03.png" />
-            <div class="picName">直播OR面试，退费保障</div>
+            <div class="picName">钻石班+火箭班+协议班</div>
             <div class="picTitle">在校生直播课程</div>
           </a-col>
           <a-col :span="6">
             <img style="width: 270px; height: 200px" src="../../assets/image/part3_bg04.png" />
-            <div class="picName">直播OR面试，退费保障</div>
+            <div class="picName">全年集训+半年集训营+暑期集训营</div>
             <div class="picTitle">管联集训营课程</div>
           </a-col>
         </a-row>
@@ -532,16 +516,24 @@
             <a-col :span="6">
               <a-form-model-item>
                 <a-select v-model="form.course" placeholder="请选择试听科目">
-                  <a-select-option value="shanghai">Zone one</a-select-option>
-                  <a-select-option value="beijing">Zone two</a-select-option>
+                  <a-select-option value="规划课">规划课</a-select-option>
+                  <a-select-option value="逻辑课">逻辑课</a-select-option>
+                  <a-select-option value="写作课">写作课</a-select-option>
+                  <a-select-option value="数学课">数学课</a-select-option>
+                  <a-select-option value="英语课">英语课</a-select-option>
                 </a-select>
               </a-form-model-item>
             </a-col>
             <a-col :span="6">
               <a-form-model-item>
-                <a-select v-model="form.region" placeholder="请选择报考专业">
-                  <a-select-option value="shanghai">Zone one</a-select-option>
-                  <a-select-option value="beijing">Zone two</a-select-option>
+                <a-select v-model="form.region" placeholder="请选择试听专业">
+                  <a-select-option value="MBA">MBA</a-select-option>
+                  <a-select-option value="MPA">MPA</a-select-option>
+                  <a-select-option value="MBM">MBM</a-select-option>
+                  <a-select-option value="MTA">MTA</a-select-option>
+                  <a-select-option value="MPAcc">MPAcc</a-select-option>
+                  <a-select-option value="Mlis">Mlis</a-select-option>
+                  <a-select-option value="MAud">MAud</a-select-option>
                 </a-select>
               </a-form-model-item>
             </a-col>
@@ -554,7 +546,9 @@
                   v-model="form.name"
                   placeholder="请选择输入姓名"
                   prefix-icon="el-icon-user"
-                ></a-input>
+                >
+                  <!-- <a-icon slot="prefix" type="user" /> -->
+                </a-input>
               </a-form-model-item>
             </a-col>
             <a-col :span="6">
@@ -564,7 +558,9 @@
                   v-model="form.telephone"
                   placeholder="请选择输入手机号"
                   prefix-icon="el-icon-mobile"
-                ></a-input>
+                >
+                  <!-- <a-icon slot="prefix" type="mobile" /> -->
+                </a-input>
               </a-form-model-item>
             </a-col>
           </a-row>
@@ -578,22 +574,7 @@
         </a-form-model>
       </div>
     </div>
-    <div class="partTen">
-      <div class="imgLeft">
-        <img src="../../assets/image/part10_left.png" />
-      </div>
-      <div class="tenRight">
-        <div class="nineLeft">
-          <h3>公开课免费学，先体验，再报名</h3>
-          <hr />
-          <p>全套课程，涵盖英语、数学、逻辑、写作以及提前面试。还有随堂作业，巩固课程知识点，即可体验。</p>
-          <button>了解详情</button>
-        </div>
-        <div class="nineRight">
-          <img src="../../assets/image/part09_pic.png" alt />
-        </div>
-      </div>
-    </div>
+    <pagefooter></pagefooter>
   </div>
 </template>
 
@@ -702,7 +683,7 @@ export default {
         direction: "horizontal", // 滑动的方向(水平方向)
         loop: true, // 是否循环
         autoplay: {
-          delay: 400000, // 自动播放的时长
+          delay: 4000, // 自动播放的时长
           disableOnInteraction: true
         },
         speed: 1500,
@@ -712,10 +693,9 @@ export default {
       },
       form: {
         name: "",
-        region: '',
-        course: '',
-        telephone:''
-   
+        region: undefined,
+        course: undefined,
+        telephone: ""
       },
       deadline: Date.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30
     }
@@ -744,4 +724,17 @@ export default {
 
 <style lang="less" scoped>
 @import url(../../assets/less/home.less);
+#components-back-top-demo-custom .ant-back-top {
+  bottom: 100px;
+}
+#components-back-top-demo-custom .ant-back-top-inner {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border-radius: 4px;
+  background-color: #1088e9;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+}
 </style>

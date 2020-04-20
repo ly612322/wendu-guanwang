@@ -11,6 +11,7 @@
     display: flex;
     justify-content: center;
     background-size: cover;
+
     .eRow {
         width: 100%;
         align-items: center;
@@ -18,13 +19,20 @@
         .eCol {
             display: flex;
             justify-content: end;
-
             .login-form-layout {
                 width: 350px;
                 margin: 25px 50px 30px 0;
-
                 h2 {
                     text-align: center;
+                }
+                .ant-input{
+                    height: 38px;
+                }
+                .ant-btn{
+                    background-color: #b20d15;
+                    border-color: #b20d15;
+                    height: 38px;
+
                 }
             }
         }
@@ -484,4 +492,9 @@
         }
 
     }
+}
+
+button {
+    outline: none;
+    filter: chroma(color=#000000) !important;
 }

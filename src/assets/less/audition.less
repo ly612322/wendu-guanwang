@@ -5,9 +5,9 @@
 }
 
 .auditionTopMes {
-    height: 380px;
+    height: 330px;
     width: 100%;
-    background: url("../../assets/image/audition/audition.png") center center no-repeat;
+    background: url("../../assets/image/audition/audition.png") left center no-repeat;
     display: flex;
     justify-content: center;
     background-size: cover;
@@ -27,6 +27,16 @@
                 h2 {
                     text-align: center;
                 }
+
+                .ant-input {
+                    height: 38px;
+                }
+
+                .ant-btn {
+                    background-color: #b20d15;
+                    border-color: #b20d15;
+                    height: 38px;
+                }
             }
         }
     }
@@ -34,7 +44,7 @@
 
 .partOne {
     background-color: #ffffff;
-    height: 610px;
+    height: 560px;
     padding-top: 50px;
 
     .partOneContent {
@@ -60,15 +70,26 @@
             font-weight: 500;
 
         }
-        .ant-row{
+
+        .ant-row {
             margin-top: 40px !important;
+
+            .ant-card {
+                height: 255px;
+                width: 335px !important;
+            }
+
+            .ant-card-body {
+                height: 200px !important;
+            }
         }
 
 
     }
 }
+
 .partNine {
-    height: 350px;
+    height: 380px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,8 +108,13 @@
             font-weight: 500;
         }
 
-        .el-select {
-            width: 100%;
+        .ant-select /deep/ .ant-select-selection--single {
+            height: 38px;
+
+        }
+
+        .ant-input {
+            height: 38px;
         }
 
         .freeBtn {

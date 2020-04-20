@@ -46,7 +46,7 @@
     <div class="partOne">
       <div class="partOneContent">
         <h2>课前服务</h2>
-        <a-row :gutter="[16,16]">
+        <a-row :gutter="[16,32]">
           <a-col :span="4">
             <img src="../../assets/image/service/part1_1.png" alt />
           </a-col>
@@ -63,7 +63,7 @@
             <img src="../../assets/image/service/part1_5.png" alt />
           </a-col>
         </a-row>
-        <a-row :gutter="[16,16]">
+        <a-row :gutter="[16,16]" style="margin-top:20px">
           <a-col :span="4">
             <img src="../../assets/image/service/part1_10.png" alt />
           </a-col>
@@ -84,38 +84,31 @@
     </div>
     <div class="partThree">
       <div class="threeContent">
-        <h2>文都管联研究院当季热销课程</h2>
-        <h3>直播课程、面授课程、集训课程、1对1课程，管联名师，总有一款适合你</h3>
+        <h2>课中服务</h2>
         <a-row type="flex" justify="center">
           <a-col :span="6">
             <div>
-              <img
-                style="width: 270px; height: 200px"
-                src="../../assets/image/service/part3_1.png"
-              />
-              <div class="picName">直播OR面试，退费保障</div>
-              <div class="picTitle">在职生笔试课程</div>
+              <img style="width: 270px; height: 200px" src="../../assets/image/service/part3_1.png" />
+              <div class="picName">在文都直播平台上课，每个学员拥有自己的专属码，可看直播/录播回放课程，可互动聊天</div>
+              <div class="picTitle">文都直播平台</div>
             </div>
           </a-col>
           <a-col :span="6">
             <div>
-              <img
-                style="width: 270px; height: 200px"
-                src="../../assets/image/service/part3_2.png"
-              />
-              <div class="picName">直播OR面试，退费保障</div>
-              <div class="picTitle">在职生提面课程</div>
+              <img style="width: 270px; height: 200px" src="../../assets/image/service/part3_2.png" />
+              <div class="picName">教师、学管师、助教，3对1为学员提供服务</div>
+              <div class="picTitle">3V1服务规格</div>
             </div>
           </a-col>
           <a-col :span="6">
             <img style="width: 270px; height: 200px" src="../../assets/image/service/part3_3.png" />
-            <div class="picName">直播OR面试，退费保障</div>
-            <div class="picTitle">在校生直播课程</div>
+            <div class="picName">有专门的团队对上课教学和服务质量进行监督，保证每节课的质量</div>
+            <div class="picTitle">全程教学服务监督</div>
           </a-col>
           <a-col :span="6">
             <img style="width: 270px; height: 200px" src="../../assets/image/service/part3_4.png" />
-            <div class="picName">直播OR面试，退费保障</div>
-            <div class="picTitle">管联集训营课程</div>
+            <div class="picName">直播、录播、面授，多种学习方式选择，满足学员的各种需求</div>
+            <div class="picTitle">授课方式多样</div>
           </a-col>
         </a-row>
       </div>
@@ -169,6 +162,7 @@
         </a-row>
       </div>
     </div>
+    <pagefooter></pagefooter>
   </div>
 </template>
 

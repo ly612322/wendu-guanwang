@@ -46,7 +46,7 @@
               <a-menu-item key="/audition">
                 <router-link to="/audition">试听课程</router-link>
               </a-menu-item>
-            
+
               <a-menu-item key="/about">
                 <router-link to="/about">关于我们</router-link>
               </a-menu-item>
@@ -56,7 +56,7 @@
       </a-layout-header>
       <a-layout-content>
         <!-- leave-active-class="animated zoomOutDown" -->
-        <transition mode="out-in" enter-active-class="animated zoomInDown">
+        <transition mode="out-in" enter-active-class="animated zoomIn">
           <keep-alive>
             <router-view></router-view>
           </keep-alive>
@@ -127,8 +127,4 @@ export default {
   height: 95vh;
   overflow: auto;
 }
-// .ant-menu-item-active{
-//   color: #b20d15 !important;
-//   border-bottom: #b20d15 !important
-// }
 </style>

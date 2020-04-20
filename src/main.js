@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import inputFilter from './utils/index'
 import './assets/style/index.less'
+import './assets/style/index.css'
 import axios from 'axios'
 import common from './utils/common'
 import qs from 'qs'
@@ -16,6 +17,8 @@ import './mock'
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 Vue.use(VueAwesomeSwiper);
 import 'swiper/css/swiper.css';
+import pagefooter from "./components/footer/footer.vue"
+
 
 import {
   Button,
@@ -35,7 +38,8 @@ import {
   List,
   Avatar,
   Tabs,
-  Icon
+  Icon,
+  BackTop
 
 } from 'ant-design-vue';
 Vue.use(Button)
@@ -56,6 +60,8 @@ Vue.use(List);
 Vue.use(Avatar);
 Vue.use(Tabs);
 Vue.use(Icon);
+Vue.use(BackTop);
+Vue.component("pagefooter", pagefooter)
 
 
 
