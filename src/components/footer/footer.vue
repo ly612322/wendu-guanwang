@@ -25,16 +25,25 @@
           <p>公众号：文都管联院</p>
         </div>
         <div class="nineRight">
-          <img src="../../assets/image/part09_pic.png" style="width:378px" alt />
+          <img src="../../assets/image/part09_pic.png" style="width:320px" alt />
         </div>
       </div>
     </div>
+    <p
+      @click="openNewUrl"
+      style="text-align:center;margin-top:8px"
+    >陕ICP备16004086号-5 版权：世纪文都教育科技集团股份有限公司</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: "pageFooter"
+  name: "pageFooter",
+  methods: {
+    openNewUrl() {
+      window.open("http://www.beian.miit.gov.cn/")
+    }
+  }
 }
 </script>
 
@@ -63,7 +72,7 @@ export default {
         width: 500px;
 
         h3 {
-          font-size: 16px;
+          font-size: 14px;
           font-weight: 500;
           margin-right: 20px;
         }

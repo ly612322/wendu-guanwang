@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import store from './store'
 import inputFilter from './utils/index'
 import './assets/style/index.less'
 import './assets/style/index.css'
@@ -12,12 +11,14 @@ import './permission'
 import 'default-passive-events'
 import animate from 'animate.css'
 Vue.use(animate)
+import './assets/style/hover.css'
 
 import './mock'
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 Vue.use(VueAwesomeSwiper);
 import 'swiper/css/swiper.css';
 import pagefooter from "./components/footer/footer.vue"
+import sidebar from "./components/sidebar/sidebar.vue"
 
 
 import {
@@ -39,7 +40,8 @@ import {
   Avatar,
   Tabs,
   Icon,
-  BackTop
+  BackTop,
+  Popover
 
 } from 'ant-design-vue';
 Vue.use(Button)
@@ -61,7 +63,9 @@ Vue.use(Avatar);
 Vue.use(Tabs);
 Vue.use(Icon);
 Vue.use(BackTop);
+Vue.use(Popover);
 Vue.component("pagefooter", pagefooter)
+Vue.component("sidebar", sidebar)
 
 
 
@@ -89,6 +93,7 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
-  store,
   render: h => h(App)
 }).$mount('#app')
+
+

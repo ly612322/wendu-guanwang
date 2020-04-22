@@ -1,4 +1,4 @@
-.teacher {
+.home {
     background-color: #f2f2f2;
     height: 91vh;
     overflow: auto;
@@ -19,20 +19,27 @@
         .eCol {
             display: flex;
             justify-content: end;
+
             .login-form-layout {
                 width: 350px;
                 margin: 25px 50px 30px 0;
+
                 h2 {
                     text-align: center;
                 }
-                .ant-input{
+
+                .ant-input {
                     height: 38px;
                 }
-                .ant-btn{
+
+                button {
                     background-color: #b20d15;
                     border-color: #b20d15;
                     height: 38px;
-
+                    padding: 0;
+                    color: white;
+                    border: 0;
+                    border-radius: 4px;
                 }
             }
         }
@@ -276,12 +283,13 @@
                         float: left;
                         width: 140px;
                         height: 140px;
+                        margin-left: 155px;
                         margin-bottom: 5px;
                     }
 
                     .teacherText {
                         float: left;
-                        width: 897px;
+                        width: 600px;
                         margin-left: 80px;
                     }
 
@@ -350,22 +358,25 @@
     .swiper-slide {
         width: 239px !important;
         height: 410px !important;
-        text-align: center;
+        text-align: left;
         color: white;
         padding: 0 20px;
 
         h3 {
             color: white;
             margin: 18px 0;
+            text-align: center;
         }
 
         img {
             margin-top: 25px;
             color: white;
+            margin-left: 40px;
         }
 
         span {
             width: 180px;
+            font-size: 12px;
         }
     }
 

@@ -11,3 +11,5 @@ if (window.Vue) {
 
 inputFilter.install = install
 export default inputFilter
+
+

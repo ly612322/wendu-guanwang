@@ -1,5 +1,5 @@
 <template>
-  <div class="teacher">
+  <div class="home">
     <div class="TeachertopMes">
       <a-row type="flex" justify="end" style="flex-wrap: wrap" class="eRow" :gutter="20">
         <a-col class="eCol">
@@ -31,12 +31,12 @@
                     prefix-icon="el-icon-key"
                     v-model="loginForm.password"
                     autocomplete="on"
-                    placeholder="请输入密码"
+                    placeholder="请输入手机号"
                   ></a-input>
                 </a-form-model-item>
               </div>
               <a-form-model-item style="margin-bottom: 20px;text-align: center">
-                <a-button style="width: 99%" type="primary">立刻报名</a-button>
+                <button class="hvr-rectangle-out" @click="openUrl" style="padding:0;width:99%">立即预约</button>
               </a-form-model-item>
             </a-form-model>
           </a-card>
@@ -77,10 +77,12 @@
         <h3>4%录取率，筛选出试合管理类联考的优秀师资</h3>
         <div class="partTwoBtn">
           <button
+            class="hvr-rectangle-out"
             @click="changeColor=!changeColor"
             :style="{'background-color':changeColor ? '#b20d15':'white','color':changeColor?'white':'black'}"
           >录用前</button>
           <button
+            class="hvr-rectangle-out"
             @click="changeColor=!changeColor"
             :style="{'background-color':changeColor ? 'white':'#b20d15','color':changeColor?'black':'white'}"
           >录用后</button>
@@ -158,64 +160,83 @@
         <h2>管联专职教师专家团队</h2>
         <h3>直播课程、面授课程、集训课程、1对1课程，管联名师，总有一款适合你</h3>
         <div class="banner">
-          <a-carousel :interval="3000" height="250px" autoplay arrow>
-            <div class="bannerItem">
-              <div class="sliderTeacher">
-                <img src="../../assets/image/part04_pic_zhangxiaoxv.png" alt />
-                <div class="teacherText">
-                  <p>
-                    <span style="margin-right: 69px;">张晓旭</span>
-                    <span>文都管联研究院逻辑院院长 逻辑写作课亲授讲师</span>
-                  </p>
-                  <p
-                    class="teacherIntrduce"
-                  >具有12年管理类联考授课经验。总结归纳20余年逻辑写作真题,熟悉真题命题规则，善于预测当年真题考点。在教学上富有激情,具有感染力,语言亲切、幽默,深受广大学生欢迎。</p>
+          <!-- <a-carousel :interval="3000" height="250px" autoplay arrow>
+            
+          
+          
+           
+          </a-carousel>-->
+          <swiper :options="swiperOptionMid">
+            <swiper-slide>
+              <div class="bannerItem">
+                <div class="sliderTeacher">
+                  <img src="../../assets/image/part04_pic_zhangxiaoxv.png" alt />
+                  <div class="teacherText">
+                    <p>
+                      <span style="margin-right: 69px;">张晓旭</span>
+                      <span>文都管联研究院逻辑院院长 逻辑写作课亲授讲师</span>
+                    </p>
+                    <p
+                      class="teacherIntrduce"
+                    >具有12年管理类联考授课经验。总结归纳20余年逻辑写作真题,熟悉真题命题规则，善于预测当年真题考点。在教学上富有激情,具有感染力,语言亲切、幽默,深受广大学生欢迎。</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="bannerItem">
-              <div class="sliderTeacher">
-                <img src="../../assets/image/part04_pic_krishu.png" alt />
-                <div class="teacherText">
-                  <p>
-                    <span style="margin-right: 69px;">Kris.Hu</span>
-                    <span>文都管联研究院英语院院长 英语课程亲授讲师</span>
-                  </p>
-                  <p
-                    class="teacherIntrduce"
-                  >对英语二提分有着独特的方法,可以让学生少背单词，快速高效的提分。上课时关注在职考生的基础，讲课通俗易懂，保证活跃的课堂氛围，课堂中学生所学即能满足考试要求，无需投入更多时间。</p>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="bannerItem">
+                <div class="sliderTeacher">
+                  <img src="../../assets/image/part04_pic_krishu.png" alt />
+                  <div class="teacherText">
+                    <p>
+                      <span style="margin-right: 69px;">Kris.Hu</span>
+                      <span>文都管联研究院英语院院长 英语课程亲授讲师</span>
+                    </p>
+                    <p
+                      class="teacherIntrduce"
+                    >对英语二提分有着独特的方法,可以让学生少背单词，快速高效的提分。上课时关注在职考生的基础，讲课通俗易懂，保证活跃的课堂氛围，课堂中学生所学即能满足考试要求，无需投入更多时间。</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="bannerItem">
-              <div class="sliderTeacher">
-                <img src="../../assets/image/part04_pic_wudi.png" alt />
-                <div class="teacherText">
-                  <p>
-                    <span style="margin-right: 69px;">武迪</span>
-                    <span>文都管联研究院数学院院长 数学课程亲授讲师</span>
-                  </p>
-                  <p
-                    class="teacherIntrduce"
-                  >知识储备雄厚，熟悉管理类联考数学真题出题特点，在数学考试中为学生指明方向节省时间。授课思路清晰，重点突出，针对不同基础学员因材施教，进行针对性辅导，确保任何基础的学生都能够听懂学会。</p>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="bannerItem">
+                <div class="sliderTeacher">
+                  <img src="../../assets/image/part04_pic_wudi.png" alt />
+                  <div class="teacherText">
+                    <p>
+                      <span style="margin-right: 69px;">武迪</span>
+                      <span>文都管联研究院数学院院长 数学课程亲授讲师</span>
+                    </p>
+                    <p
+                      class="teacherIntrduce"
+                    >知识储备雄厚，熟悉管理类联考数学真题出题特点，在数学考试中为学生指明方向节省时间。授课思路清晰，重点突出，针对不同基础学员因材施教，进行针对性辅导，确保任何基础的学生都能够听懂学会。</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="bannerItem">
-              <div class="sliderTeacher">
-                <img src="../../assets/image/part04_pic_liyang.png" alt />
-                <div class="teacherText">
-                  <p>
-                    <span style="margin-right: 69px;">李阳</span>
-                    <span>文都管联研究院院长</span>
-                  </p>
-                  <p
-                    class="teacherIntrduce"
-                  >文都管联研究院院长，亲自负责MBA面试授课。曾任美国人工智能roboterra.inc公司华南区总经理，具备丰富的面试实战经验，多次参与大型商务谈判和创业面试路演活动“西安市人民检察院建筑智能化商务合同”“广东省青少年宫协会福彩育苗计划”“北京大学光华管理学院创业孵化营。</p>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="bannerItem">
+                <div class="sliderTeacher">
+                  <img src="../../assets/image/part04_pic_liyang.png" alt />
+                  <div class="teacherText">
+                    <p>
+                      <span style="margin-right: 69px;">李阳</span>
+                      <span>文都管联研究院院长</span>
+                    </p>
+                    <p
+                      class="teacherIntrduce"
+                    >文都管联研究院院长，亲自负责MBA面试授课。曾任美国人工智能roboterra.inc公司华南区总经理，具备丰富的面试实战经验，多次参与大型商务谈判和创业面试路演活动“西安市人民检察院建筑智能化商务合同”“广东省青少年宫协会福彩育苗计划”“北京大学光华管理学院创业孵化营。</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </a-carousel>
+            </swiper-slide>
+            <!-- 分页器 -->
+            <div class="swiper-pagination-mid" slot="pagination"></div>
+            <!-- 左右箭头 -->
+            <div class="swiper-button-prev" slot="button-prev" style="left:68px !important"></div>
+            <div class="swiper-button-next" slot="button-next" style="right:68px !important"></div>
+          </swiper>
         </div>
       </div>
     </div>
@@ -288,7 +309,7 @@ export default {
 
           title: "逻辑写作名师 党艺萍",
           text:
-            "文都管联研究院优逻辑与写作特级讲师，致力于管理类联考逻辑及写作授课，教学方法与时俱进，通俗易懂，上课风格严肃又不失风趣，同时将自身的高分考研经历与方法融汇在日常教学中，深入浅出，对联考试题和考察方向有精准把握，擅长迅速提升学员的应试能力，受到广大学员的喜爱。"
+            "文都管综数学金牌讲师，教学经验丰富，对管理类联考数学解题有深入的研究，并长期从事文都联考数学的教研工作，在教学上语言亲切，有感染力。在解题上总结题型秒杀技巧。所讲课程深受学生喜爱。"
         },
         {
           src: require("../../assets/image/teacherList/part3_zixuan.png"),
@@ -316,14 +337,40 @@ export default {
         direction: "horizontal", // 滑动的方向(水平方向)
         loop: true, // 是否循环
         autoplay: {
-          delay: 4000, // 自动播放的时长
-          disableOnInteraction: true
+          delay: 2000, // 自动播放的时长
+          disableOnInteraction: false
         },
         speed: 1500,
         slidesPerView: 5, // 设置可视区一共显示几张图片,设置auto,设置auto为自适应;
         centeredSlides: true, // 设置为true时,带有active-slide类名的图片会居中
         spaceBetween: 2 //  每张图片之间的间隔
+      },
+      swiperOptionMid: {
+        //显示分页
+        pagination: {
+          el: ".swiper-pagination-mid"
+        },
+        //设置点击箭头
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+        //自动轮播
+        autoplay: {
+          delay: 3000,
+          //当用户滑动图片后继续自动轮播
+          disableOnInteraction: false
+        },
+        //开启循环模式
+        loop: true
       }
+    }
+  },
+  methods: {
+    openUrl() {
+      window.open(
+        "http://pdt.zoosnet.net/LR/Chatpre.aspx?id=PDT30733869&lng=cn"
+      )
     }
   }
 }

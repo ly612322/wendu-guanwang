@@ -1,5 +1,5 @@
 <template>
-  <div class="audition">
+  <div class="home">
     <div class="auditionTopMes">
       <a-row type="flex" justify="end" style="flex-wrap: wrap" class="eRow" :gutter="20">
         <a-col class="eCol">
@@ -31,12 +31,12 @@
                     prefix-icon="el-icon-key"
                     v-model="loginForm.password"
                     autocomplete="on"
-                    placeholder="请输入密码"
+                    placeholder="请输入手机号"
                   ></a-input>
                 </a-form-model-item>
               </div>
               <a-form-model-item style="margin-bottom: 20px;text-align: center">
-                <a-button style="width: 99%" type="primary">立刻报名</a-button>
+                <button class="hvr-rectangle-out" @click="openUrl" style="padding:0;width:99%">立即预约</button>
               </a-form-model-item>
             </a-form-model>
           </a-card>
@@ -48,187 +48,17 @@
         <h2>免费试听课程</h2>
         <div class="card-container">
           <a-tabs type="card">
-            <a-tab-pane tab="规划课" key="1">
+            <a-tab-pane :tab="index" :key="index" v-for="(item,index) in freeCourse">
               <a-row :gutter="[16,16]">
-                <a-col :span="8">
-                  <a-card title="2021届管理类联考院校规划试听课" style="width: 300px">
+                <a-col :span="8" v-for="(text,number) in item" :key="number">
+                  <a-card :title="text.title" style="width: 300px">
                     <template class="ant-card-actions" slot="actions">
-                      <span>立即预约</span>
+                      <span @click="openUrl" style="color:#b20d15">立即预约</span>
                     </template>
-                    <a-card-meta title="张晓旭" description style="height:84px">
-                      <a-avatar slot="avatar" :src="header" />
+                    <a-card-meta :title="text.name" description style="height:84px">
+                      <a-avatar slot="avatar" :src="text.pic" />
                     </a-card-meta>
-                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
-                  </a-card>
-                </a-col>
-                <a-col :span="8">
-                  <a-card title="2021届管理类联考院校规划试听课" style="width: 300px">
-                    <template class="ant-card-actions" slot="actions">
-                      <span>立即预约</span>
-                    </template>
-                    <a-card-meta title="张晓旭" description style="height:84px">
-                      <a-avatar slot="avatar" :src="header" />
-                    </a-card-meta>
-                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
-                  </a-card>
-                </a-col>
-                <a-col :span="8">
-                  <a-card title="2021届管理类联考院校规划试听课" style="width: 300px">
-                    <template class="ant-card-actions" slot="actions">
-                      <span>立即预约</span>
-                    </template>
-                    <a-card-meta title="张晓旭" description style="height:84px">
-                      <a-avatar slot="avatar" :src="header" />
-                    </a-card-meta>
-                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
-                  </a-card>
-                </a-col>
-              </a-row>
-            </a-tab-pane>
-            <a-tab-pane tab="管综专业课" key="2">
-              <a-row :gutter="[16,16]">
-                <a-col :span="8">
-                  <a-card title="2021届管理类联考管综逻辑试听课" style="width: 300px">
-                    <template class="ant-card-actions" slot="actions">
-                      <span>立即预约</span>
-                    </template>
-                    <a-card-meta title="张晓旭" description style="height:84px">
-                      <a-avatar slot="avatar" :src="header" />
-                    </a-card-meta>
-                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
-                  </a-card>
-                </a-col>
-                <a-col :span="8">
-                  <a-card title="2021届管理类联考管综逻辑试听课" style="width: 300px">
-                    <template class="ant-card-actions" slot="actions">
-                      <span>立即预约</span>
-                    </template>
-                    <a-card-meta title="张晓旭" description style="height:84px">
-                      <a-avatar slot="avatar" :src="header" />
-                    </a-card-meta>
-                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
-                  </a-card>
-                </a-col>
-                <a-col :span="8">
-                  <a-card title="2021届管理类联考管综逻辑试听课" style="width: 300px">
-                    <template class="ant-card-actions" slot="actions">
-                      <span>立即预约</span>
-                    </template>
-                    <a-card-meta title="张晓旭" description style="height:84px">
-                      <a-avatar slot="avatar" :src="header" />
-                    </a-card-meta>
-                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
-                  </a-card>
-                </a-col>
-              </a-row>
-            </a-tab-pane>
-            <a-tab-pane tab="英语二" key="3">
-              <a-row :gutter="[16,16]">
-                <a-col :span="8">
-                  <a-card title="2021届管理类联考英语二试听课" style="width: 300px">
-                    <template class="ant-card-actions" slot="actions">
-                      <span>立即预约</span>
-                    </template>
-                    <a-card-meta title="张晓旭" description style="height:84px">
-                      <a-avatar slot="avatar" :src="header" />
-                    </a-card-meta>
-                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
-                  </a-card>
-                </a-col>
-                <a-col :span="8">
-                  <a-card title="2021届管理类联考英语二试听课" style="width: 300px">
-                    <template class="ant-card-actions" slot="actions">
-                      <span>立即预约</span>
-                    </template>
-                    <a-card-meta title="张晓旭" description style="height:84px">
-                      <a-avatar slot="avatar" :src="header" />
-                    </a-card-meta>
-                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
-                  </a-card>
-                </a-col>
-                <a-col :span="8">
-                  <a-card title="2021届管理类联考英语二试听课" style="width: 300px">
-                    <template class="ant-card-actions" slot="actions">
-                      <span>立即预约</span>
-                    </template>
-                    <a-card-meta title="张晓旭" description style="height:84px">
-                      <a-avatar slot="avatar" :src="header" />
-                    </a-card-meta>
-                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
-                  </a-card>
-                </a-col>
-              </a-row>
-            </a-tab-pane>
-            <a-tab-pane tab="提前面试" key="4">
-              <a-row :gutter="[16,16]">
-                <a-col :span="8">
-                  <a-card title="2021届管理类联考管综提面试听课" style="width: 300px">
-                    <template class="ant-card-actions" slot="actions">
-                      <span>立即预约</span>
-                    </template>
-                    <a-card-meta title="张晓旭" description style="height:84px">
-                      <a-avatar slot="avatar" :src="header" />
-                    </a-card-meta>
-                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
-                  </a-card>
-                </a-col>
-                <a-col :span="8">
-                  <a-card title="2021届管理类联考管综提面试听课" style="width: 300px">
-                    <template class="ant-card-actions" slot="actions">
-                      <span>立即预约</span>
-                    </template>
-                    <a-card-meta title="张晓旭" description style="height:84px">
-                      <a-avatar slot="avatar" :src="header" />
-                    </a-card-meta>
-                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
-                  </a-card>
-                </a-col>
-                <a-col :span="8">
-                  <a-card title="2021届管理类联考管综提面试听课" style="width: 300px">
-                    <template class="ant-card-actions" slot="actions">
-                      <span>立即预约</span>
-                    </template>
-                    <a-card-meta title="张晓旭" description style="height:84px">
-                      <a-avatar slot="avatar" :src="header" />
-                    </a-card-meta>
-                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
-                  </a-card>
-                </a-col>
-              </a-row>
-            </a-tab-pane>
-            <a-tab-pane tab="1V1课程" key="5">
-              <a-row :gutter="[16,16]">
-                <a-col :span="8">
-                  <a-card title="2021届管理类联考提面1V1试听课" style="width: 300px">
-                    <template class="ant-card-actions" slot="actions">
-                      <span>立即预约</span>
-                    </template>
-                    <a-card-meta title="张晓旭" description style="height:84px">
-                      <a-avatar slot="avatar" :src="header" />
-                    </a-card-meta>
-                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
-                  </a-card>
-                </a-col>
-                <a-col :span="8">
-                  <a-card title="2021届管理类联考提面1V1试听课" style="width: 300px">
-                    <template class="ant-card-actions" slot="actions">
-                      <span>立即预约</span>
-                    </template>
-                    <a-card-meta title="张晓旭" description style="height:84px">
-                      <a-avatar slot="avatar" :src="header" />
-                    </a-card-meta>
-                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
-                  </a-card>
-                </a-col>
-                <a-col :span="8">
-                  <a-card title="2021届管理类联考提面1V1试听课" style="width: 300px">
-                    <template class="ant-card-actions" slot="actions">
-                      <span>立即预约</span>
-                    </template>
-                    <a-card-meta title="张晓旭" description style="height:84px">
-                      <a-avatar slot="avatar" :src="header" />
-                    </a-card-meta>
-                    <h3 style="float:right;margin:0;padding:0">已报423人</h3>
+                    <h3 style="float:right;margin:0;padding:0">已报{{text.count}}人</h3>
                   </a-card>
                 </a-col>
               </a-row>
@@ -282,7 +112,7 @@
           <a-row type="flex" justify="center">
             <a-col :span="3">
               <a-form-model-item>
-                <a-button class="freeBtn">立即预约</a-button>
+                <button class="freeBtn hvr-rectangle-out" @click="openUrl" style="padding:0">立即预约</button>
               </a-form-model-item>
             </a-col>
           </a-row>
@@ -307,12 +137,118 @@ export default {
         course: undefined,
         telephone: ""
       },
-      header: require("../../assets/image/audition/teacher.png")
+      freeCourse: {
+        规划课: [
+          {
+            title: "2021届管理类联考院校规划试听课",
+            pic: require("../../assets/image/audition/teacher.png"),
+            name: "张晓旭",
+            count: "277"
+          },
+          {
+            title: "2021届管理类联考复习规划试听课",
+            pic: require("../../assets/image/part04_pic_liyang.png"),
+            name: "李阳",
+            count: "423"
+          },
+          {
+            title: "2021届管理类联考专业就业规划指导",
+            pic: require("../../assets/image/part04_pic_liyang.png"),
+            name: "李阳",
+            count: "455"
+          }
+        ],
+        专业课: [
+          {
+            title: "2021届管理类联考逻辑试听课",
+            pic: require("../../assets/image/audition/teacher.png"),
+            name: "张晓旭",
+            count: "314"
+          },
+          {
+            title: "2021届管理类联考写作试听课",
+            pic: require("../../assets/image/teacherList/part3_duoliang.png"),
+            name: "尹多良",
+            count: "288"
+          },
+          {
+            title: "2021届管理类联考数学试听课",
+            pic: require("../../assets/image/part04_pic_wudi.png"),
+            name: "武迪",
+            count: "341"
+          }
+        ],
+        英语二: [
+          {
+            title: "2021届管理类联考英语二——单词语法",
+            pic: require("../../assets/image/part04_pic_krishu.png"),
+            name: "Kris Hu",
+            count: "255"
+          },
+          {
+            title: "2021届管理类联考英语二——阅读完形",
+            pic: require("../../assets/image/teacherList/part3_zixuan.png"),
+            name: "张紫宣",
+            count: "384"
+          },
+          {
+            title: "2021届管理类联考英语二——翻译作文",
+            pic: require("../../assets/image/teacherList/part3_zhangliao.png"),
+            name: "张辽",
+            count: "297"
+          }
+        ],
+        提前面试: [
+          {
+            title: "2021届管理类联考提前面试—背景评估",
+            pic: require("../../assets/image/part04_pic_liyang.png"),
+            name: "李阳",
+            count: "135"
+          },
+          {
+            title: "2021届管理类联考提前面试—综合面试",
+            pic: require("../../assets/image/part04_pic_liyang.png"),
+            name: "李阳",
+            count: "235"
+          },
+          {
+            title: "2021届管理类联考复试调剂试听课",
+            pic: require("../../assets/image/audition/teacher.png"),
+            name: "张晓旭",
+            count: "221"
+          }
+        ],
+        "1对1课程": [
+          {
+            title: "2021届管理类联考提前面试1V1试听课",
+            pic: require("../../assets/image/part04_pic_liyang.png"),
+            name: "李阳",
+            count: "263"
+          },
+          {
+            title: "2021届管理类联考1V1答疑试听课",
+            pic: require("../../assets/image/audition/teacher.png"),
+            name: "张晓旭",
+            count: "125"
+          },
+          {
+            title: "2021届管理类联考1V1整体规划课",
+            pic: require("../../assets/image/audition/teacher.png"),
+            name: "张晓旭",
+            count: "284"
+          }
+        ]
+      }
     }
   },
   methods: {
     callback(key) {
       console.log(key)
+    },
+    openUrl() {
+      window.open(
+        "http://pdt.zoosnet.net/LR/Chatpre.aspx?id=PDT30733869&lng=cn"
+      )
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="service">
+  <div class="home">
     <div class="serviceTopMes">
       <a-row type="flex" justify="end" style="flex-wrap: wrap" class="eRow" :gutter="20">
         <a-col class="eCol">
@@ -31,12 +31,12 @@
                     prefix-icon="el-icon-key"
                     v-model="loginForm.password"
                     autocomplete="on"
-                    placeholder="请输入密码"
+                    placeholder="请输入手机号"
                   ></a-input>
                 </a-form-model-item>
               </div>
               <a-form-model-item style="margin-bottom: 20px;text-align: center">
-                <a-button style="width: 99%" type="primary">立刻报名</a-button>
+                <button class="hvr-rectangle-out" @click="openUrl" style="padding:0;width:99%">立即预约</button>
               </a-form-model-item>
             </a-form-model>
           </a-card>
@@ -174,6 +174,13 @@ export default {
         username: "",
         password: ""
       }
+    }
+  },
+    methods: {
+    openUrl() {
+      window.open(
+        "http://pdt.zoosnet.net/LR/Chatpre.aspx?id=PDT30733869&lng=cn"
+      )
     }
   }
 }

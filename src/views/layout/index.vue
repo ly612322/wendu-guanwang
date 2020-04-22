@@ -15,6 +15,15 @@
               </a-menu-item>
               <a-sub-menu key="/course">
                 <template slot="title">课程中心</template>
+                <a-menu-item @click="openUrl" key="/zStuRecruit">在职生招生简章</a-menu-item>
+                <a-menu-item @click="openUrl" key="/xStuRecruit">在校生招生简章</a-menu-item>
+                <a-menu-item @click="openUrl" key="2-3">在校生直播课程</a-menu-item>
+                <a-menu-item @click="openUrl" key="2-4">在职生提面课程</a-menu-item>
+                <a-menu-item @click="openUrl" key="2-5">在职生笔试课程</a-menu-item>
+                <a-menu-item @click="openUrl" key="2-6">在校生集训课程</a-menu-item>
+              </a-sub-menu>
+              <!-- <a-sub-menu key="/course">
+                <template slot="title">课程中心</template>
                 <a-menu-item key="/zStuRecruit">
                   <router-link to="/zStuRecruit">在职生招生简章</router-link>
                 </a-menu-item>
@@ -33,16 +42,16 @@
                 <a-menu-item key="2-6">
                   <router-link to="/">在校生集训课程</router-link>
                 </a-menu-item>
-              </a-sub-menu>
+              </a-sub-menu>-->
               <a-menu-item key="/teacherList">
                 <router-link to="/teacherList">师资力量</router-link>
               </a-menu-item>
               <a-menu-item key="/teachService">
                 <router-link to="/teachService">教学服务</router-link>
               </a-menu-item>
-              <a-menu-item key="/glnews">
+              <!-- <a-menu-item key="/glnews">
                 <router-link to="/glnews">管联资讯</router-link>
-              </a-menu-item>
+              </a-menu-item>-->
               <a-menu-item key="/audition">
                 <router-link to="/audition">试听课程</router-link>
               </a-menu-item>
@@ -61,6 +70,8 @@
             <router-view></router-view>
           </keep-alive>
         </transition>
+            <sidebar></sidebar>
+
       </a-layout-content>
     </a-layout>
   </div>
@@ -79,6 +90,11 @@ export default {
     },
     onClose() {
       this.visible = false
+    },
+    openUrl() {
+      window.open(
+        "http://pdt.zoosnet.net/LR/Chatpre.aspx?id=PDT30733869&lng=cn"
+      )
     }
   }
 }

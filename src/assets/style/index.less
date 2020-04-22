@@ -50,6 +50,7 @@ body {
   }
 
 );
+
 .keyframes(all, fade_in_opacity, {
     from {
       transform: translateY(10px);
@@ -101,6 +102,10 @@ body {
   color: #b20d15 !important;
 }
 
+.ant-menu-horizontal>.ant-menu-item>a {
+  color: #333333 !important
+}
+
 .ant-menu-item {
   margin: 0 25px;
   padding: 0 10px;
@@ -116,6 +121,18 @@ body {
   margin: 0 25px;
   width: 55px;
   text-align: center;
+}
+
+.slick-active button {
+  background-color: #b20d15 !important;
+}
+
+.slick-dots {
+  li :not(.slick-active) button {
+    background-color: #ffffff !important;
+    width: 40px !important;
+  }
+
 }
 
 //倒计时
@@ -197,4 +214,27 @@ body {
 //分页
 .ant-list-pagination {
   text-align: center !important;
+}
+
+//swiper
+.swiper-pagination {
+  margin-bottom: 100px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #858585 !important;
+  width: 10px;
+  height: 10px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #b20d15 !important;
+}
+
+.swiper-button-prev {
+  left: 186px !important;
+}
+
+.swiper-button-next {
+  right: 186px !important;
 }

@@ -91,6 +91,7 @@ img {
     background-color: #f2f2f2;
     height: 550px;
     padding-top: 50px;
+
     .partTwoContent {
         width: 1200px;
         margin: 0 auto;
@@ -105,62 +106,66 @@ img {
 
         }
 
-       
-            .courseImg {
-                height: 365px;
-                width: 400px;
-                padding: 0 !important;
-                background-color: white;
-                display: flex;
-                flex-direction: column;
-                justify-content: start;
-                align-items: center;
 
-                .title {
-                    z-index: 99;
-                    color: #333333;
-                    font-size: 20px;
-                    margin-top: 50px;
+        .courseImg {
+            height: 365px;
+            width: 400px;
+            padding: 0 !important;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+
+            .title {
+                z-index: 99;
+                color: #333333;
+                font-size: 20px;
+                margin-top: 50px;
+            }
+
+            .time {
+                z-index: 99;
+                color: white;
+                font-size: 14px;
+                width: 250px;
+                height: 40px;
+                background-image: linear-gradient(#eb2933, #b20d15);
+                text-align: center;
+                padding-top: 8px;
+                margin-top: 28px;
+                border-radius: 6px;
+
+            }
+        }
+
+        .courseList {
+            width: 400px;
+
+            .timeshow {
+                width: 436px;
+                height: 365px;
+                padding: 20px;
+                background-color: white;
+                overflow: auto;
+
+                .ant-timeline {
+                    .ant-timeline-item {
+                        h3 {
+                            margin: 0 0 15px 0;
+                            text-align: left;
+                            font-size: 16px;
+                        }
+                    }
+
                 }
 
-                .time {
-                    z-index: 99;
-                    color: white;
-                    font-size: 14px;
-                    width: 250px;
-                    height: 50px;
-                    background-color: #b20d15;
-                    text-align: center;
-                    padding-top: 8px;
-                    margin-top: 28px;
-                    border-radius: 30px;
-
+                .timeBtn {
+                    float: right;
+                    color: #b20d15;
                 }
             }
 
-            .courseList {
-                width: 400px;
-                .timeshow {
-                    width: 436px;
-                    height: 365px;
-                    padding: 20px;
-                    background-color: white;
-                    .ant-timeline{
-                        height: 365px;
-                        .ant-timeline-item{
-                            height: 110px;
-                            h3{
-                                margin: 0 0 15px 0;
-                                text-align: left;font-size: 16px;
-                            }
-                        }
-
-                    }
-                    .timeBtn {
-                        float: right;
-                    }
-                }
-            
         }
     }
 }
@@ -199,6 +204,7 @@ img {
             .ant-col {
                 height: 150px;
                 text-align: center;
+                cursor: pointer;
 
                 .picName {
                     margin-top: -60px;
@@ -260,7 +266,7 @@ img {
         }
 
         .banner {
-            width: 1120px;
+            width: 1200px;
 
             .bannerItem {
                 .sliderTeacher {
@@ -274,12 +280,13 @@ img {
                         float: left;
                         width: 140px;
                         height: 140px;
+                        margin-left: 155px;
                         margin-bottom: 5px;
                     }
 
                     .teacherText {
                         float: left;
-                        width: 897px;
+                        width:662px;
                         margin-left: 80px;
                     }
 
@@ -348,22 +355,25 @@ img {
     .swiper-slide {
         width: 239px !important;
         height: 330px !important;
-        text-align: center;
+        text-align: left;
         color: white;
         padding: 0 36px;
 
         h3 {
             color: white;
             margin: 18px 0;
+            text-align: center;
         }
 
         svg {
             margin-top: 65px;
             color: white;
+            margin-left: 50px;
         }
 
         span {
             width: 180px;
+            font-size: 12px;
         }
     }
 
@@ -437,6 +447,11 @@ img {
                     font-size: 30px;
                     margin-top: 0px;
                     margin-bottom: 10px;
+
+                    strong {
+                        color: #b20d15;
+                        font-weight: 500 !important;
+                    }
                 }
 
                 span {
@@ -603,6 +618,13 @@ img {
                         text-align: center;
                         border-radius: 20px;
                         padding-top: 6px;
+
+                        &:hover {
+                            background-image: linear-gradient(#eb2933, #b20d15);
+                            color: white;
+                            border: 0;
+
+                        }
                     }
                 }
             }
@@ -658,6 +680,7 @@ img {
                     color: #b20d15;
                     font-size: 18px;
                     margin-top: 0px;
+                    margin-bottom: 15px;
                 }
 
                 span {

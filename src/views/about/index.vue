@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="home">
     <div class="aboutTopMes"></div>
     <div class="partOne">
       <div class="partOneContent">
