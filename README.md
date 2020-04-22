@@ -1,11 +1,6 @@
-# 异常处置系统 Vue重构
+# 官网
 
 vue
-vue-router
-vuex
-axios
-elementui
-vue-echarts
 
 ## Project setup
 ```
